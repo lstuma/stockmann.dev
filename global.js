@@ -1,6 +1,6 @@
 // js banner
 //
-console.log("v0.1a")
+console.log("v0.1b")
 
 //
 //	this script loads in base materials like navbar and footer..
