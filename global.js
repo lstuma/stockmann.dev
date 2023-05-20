@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.j"
+let version ="v0.l"
 let stable = true
 console.log(version + stable?"":" (unstable)")
 
@@ -19,7 +19,7 @@ async function get_content(link) {
 //
 //	switching of page
 //
-async function loadlink(link) {
+async function load(link) {
 	// update address bar
 	window.history.pushState(link, "unused", link)
 	// get data for actual content of page
