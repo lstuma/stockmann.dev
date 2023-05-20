@@ -39,7 +39,7 @@ async function req_page(link) {
 }
 async function req_blog(link) {
 	// get raw data
-	let data = await get_content(link[-1]+".txt")
+	let data = await get_content(link.slice(0,-1)+".txt")
 	// format markdown
 	return data
 }
