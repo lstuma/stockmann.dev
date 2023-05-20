@@ -61,6 +61,7 @@ body {
 }
 
 a {
+	cursor: pointer;
 	color: white;
 	text-decoration: none;
 }
