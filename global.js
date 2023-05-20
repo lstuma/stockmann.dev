@@ -1,8 +1,8 @@
 //	js banner
 //
-let version ="v0.l"
+let version ="v0.m"
 let stable = true
-console.log(version + stable?"":" (unstable)")
+console.log(version + (stable?"":" (unstable)"))
 
 //
 //	this script loads in base materials like navbar and footer..
