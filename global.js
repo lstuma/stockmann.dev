@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1r"
+let version ="v0.1s"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -65,15 +65,15 @@ async function format_markdown_line(line) {
 	if(line.startsWith('######'))
 		line = "<h6>"+line.slice(7)+"</h6>"
 	else if(line.startsWith('#####'))
-		line = "<h5>"+line.slice(7)+"</h5>"
+		line = "<h5>"+line.slice(6)+"</h5>"
 	else if(line.startsWith('####'))
-		line = "<h4>"+line.slice(7)+"</h4>"
+		line = "<h4>"+line.slice(5)+"</h4>"
 	else if(line.startsWith('###'))
-		line = "<h3>"+line.slice(7)+"</h3>"
+		line = "<h3>"+line.slice(4)+"</h3>"
 	else if(line.startsWith('##'))
-		line = "<h2>"+line.slice(7)+"</h2>"
+		line = "<h2>"+line.slice(3)+"</h2>"
 	else if(line.startsWith('#'))
-		line = "<h1>"+line.slice(7)+"</h1>"
+		line = "<h1>"+line.slice(2)+"</h1>"
 	else
 		line = "<p>"+line+"</p>"
 
