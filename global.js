@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.n"
+let version ="v0.1o"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -47,7 +47,7 @@ async function format_markdown(text) {
 	let formatted = ""
 	for(let line of text.split('\n'))
 	{
-		formatted += format_markdown_line(line)
+		formatted += await format_markdown_line(line)
 	}
 	return formatted
 }

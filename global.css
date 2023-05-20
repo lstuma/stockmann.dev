@@ -110,7 +110,7 @@ a {
 .card {
 	background-color: white;
 	border-radius: 1em;
-	color: black;
+	color: black !important;
 	padding: 0.15em 1em;
 }
 
