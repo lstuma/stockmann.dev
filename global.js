@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1t"
+let version ="v0.1u"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -51,11 +51,10 @@ async function format_markdown(text) {
 		formatted += await format_markdown_line(line)
 	}
 	// format bold, italic, underscore...
-	let new_instance = false
-	let pos = 0
-	while((pos=formatted.indexOf('***'))!=-1)
+	while(formatted.includes('***'))
 	{
-		formatted = formatted.slice(0, pos) + (new_instance=!new_instance)?"<span class='bold'>":"</span>" + formatted.slice(pos+3)
+		formatted = formatted.replace('***', "<span class='bold'>")
+		formatted = formatted.replace('***', "</span>")
 	}
 
 	return formatted
