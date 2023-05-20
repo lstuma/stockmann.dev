@@ -1,5 +1,9 @@
+// js banner
 //
-//	This script loads in base materials like  navbar and footer..
+console.log("v0.01b")
+
+//
+//	this script loads in base materials like  navbar and footer..
 //
 
 const pre_content = document.querySelector('#pre-content')
