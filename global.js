@@ -10,8 +10,7 @@ const pre_content = document.querySelector('#pre-content')
 const content = document.querySelector('#content')
 
 async function get_content(link) {
-	let data = await fetch(link).then((response) => { return response})
-	return data;
+	return await fetch(link).then(response => response.text())
 }
 
 // load in top navbar
