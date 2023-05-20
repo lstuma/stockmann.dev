@@ -53,10 +53,10 @@ async function format_markdown(text) {
 	// format bold, italic, underscore...
 	let new_instance = false
 	let pos = 0
-	/*while((pos=formatted.indexOf('***'))!=-1)
+	while((pos=formatted.indexOf('***'))!=-1)
 	{
-		formatted = formatted.slice(0, pos) + new_instance?"<span class='bold'>":"</span>" + formatted.slice(pos+3, -0)
-	}*/
+		formatted = formatted.slice(0, pos) + (new_instance=!new_instance)?"<span class='bold'>":"</span>" + formatted.slice(pos+3)
+	}
 
 	return formatted
 }
