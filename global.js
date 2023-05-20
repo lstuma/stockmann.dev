@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1p"
+let version ="v0.1q"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -65,6 +65,8 @@ async function format_markdown_line(line) {
 		line = "<h2>"+line.slice(7,-0)+"</h2>"
 	else if(line.startsWith('#'))
 		line = "<h1>"+line.slice(7,-0)+"</h1>"
+
+	return line
 }
 
 
