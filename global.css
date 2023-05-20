@@ -66,6 +66,10 @@ a {
 	text-decoration: none;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 .nav-item, .nav-brand {
 	display: inline-flex;
 	color: black;

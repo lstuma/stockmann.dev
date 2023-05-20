@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1u"
+let version ="v0.1w"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -25,12 +25,17 @@ async function load(link) {
 	// get data for actual content of page
 	let data = "404 - Not found!"
 	if(link.startsWith("/blog/") && link != '/blog/')
+	{
+		// article base
+		content.innerHTML = await get_content('/blog/article_base.html')
 		data = await req_blog(link)
+		document.querySelector('#article_base').innerHTML = data
+	}
 	else
+	{
+		content.innerHTML = data
 		data = await req_page(link)
-
-	// update content of page
-	content.innerHTML = data
+	}
 }
 // get content of page
 async function req_page(link) {
@@ -41,7 +46,7 @@ async function req_blog(link) {
 	// get raw data
 	let data = await get_content(link.slice(0,-1)+".txt")
 	// format markdown
-	return "<div class='card'>"+ await format_markdown(data) +"</div>"
+	return await format_markdown(data)
 }
 async function format_markdown(text) {
 	let formatted = ""
