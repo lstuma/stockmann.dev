@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1q"
+let version ="v0.1r"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
