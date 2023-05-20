@@ -63,17 +63,17 @@ async function format_markdown(text) {
 async function format_markdown_line(line) {
 	// headings
 	if(line.startsWith('######'))
-		line = "<h6>"+line.slice(7,-0)+"</h6>"
+		line = "<h6>"+line.slice(7)+"</h6>"
 	else if(line.startsWith('#####'))
-		line = "<h5>"+line.slice(7,-0)+"</h5>"
+		line = "<h5>"+line.slice(7)+"</h5>"
 	else if(line.startsWith('####'))
-		line = "<h4>"+line.slice(7,-0)+"</h4>"
+		line = "<h4>"+line.slice(7)+"</h4>"
 	else if(line.startsWith('###'))
-		line = "<h3>"+line.slice(7,-0)+"</h3>"
+		line = "<h3>"+line.slice(7)+"</h3>"
 	else if(line.startsWith('##'))
-		line = "<h2>"+line.slice(7,-0)+"</h2>"
+		line = "<h2>"+line.slice(7)+"</h2>"
 	else if(line.startsWith('#'))
-		line = "<h1>"+line.slice(7,-0)+"</h1>"
+		line = "<h1>"+line.slice(7)+"</h1>"
 	else
 		line = "<p>"+line+"</p>"
 
