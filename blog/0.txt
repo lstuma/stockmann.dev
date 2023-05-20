@@ -4,4 +4,6 @@
 #### test
 ##### that
 ###### hopefully works
-great!
+great! ***this*** should be ***bold***
+***perf
+ect***

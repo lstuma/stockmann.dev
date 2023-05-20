@@ -45,10 +45,19 @@ async function req_blog(link) {
 }
 async function format_markdown(text) {
 	let formatted = ""
+	// format line specific things
 	for(let line of text.split('\n'))
 	{
 		formatted += await format_markdown_line(line)
 	}
+	// format bold, italic, underscore...
+	let new_instance = false
+	let pos = 0
+	while((pos=formatted.indexOf('***'))!=-1)
+	{
+		formatted = formatted.slice(0, pos) + new_instance?"<span class='bold'>":"</span>" + formatted.slice(pos+3, -0)
+	}
+
 	return formatted
 }
 async function format_markdown_line(line) {
@@ -65,6 +74,8 @@ async function format_markdown_line(line) {
 		line = "<h2>"+line.slice(7,-0)+"</h2>"
 	else if(line.startsWith('#'))
 		line = "<h1>"+line.slice(7,-0)+"</h1>"
+	else
+		line = "<p>"+line+"</p>"
 
 	return line
 }
