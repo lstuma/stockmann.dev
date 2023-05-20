@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.1o"
+let version ="v0.1p"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -41,7 +41,7 @@ async function req_blog(link) {
 	// get raw data
 	let data = await get_content(link.slice(0,-1)+".txt")
 	// format markdown
-	return "<div class='card'>"+format_markdown(data)+"</div>"
+	return "<div class='card'>"+ await format_markdown(data) +"</div>"
 }
 async function format_markdown(text) {
 	let formatted = ""
