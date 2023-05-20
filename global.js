@@ -33,8 +33,8 @@ async function load(link) {
 	}
 	else
 	{
-		content.innerHTML = data
 		data = await req_page(link)
+		content.innerHTML = data
 	}
 }
 // get content of page
