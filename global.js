@@ -3,7 +3,7 @@
 console.log("v0.1a")
 
 //
-//	this script loads in base materials like  navbar and footer..
+//	this script loads in base materials like navbar and footer..
 //
 
 const pre_content = document.querySelector('#pre-content')
