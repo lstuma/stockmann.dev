@@ -53,7 +53,7 @@ async function format_markdown(text) {
 	// format bold, italic, underscore...
 	while(formatted.includes('***'))
 	{
-		formatted = formatted.replace('***', "<span class='bold'>").formatted.replace('***', "</span>")
+		formatted = formatted.replace('***', "<span class='bold'>").replace('***', "</span>")
 	}
 
 	return formatted
