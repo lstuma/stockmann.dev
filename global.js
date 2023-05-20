@@ -1,6 +1,6 @@
 //	js banner
 //
-let version ="v0.m"
+let version ="v0.n"
 let stable = true
 console.log(version + (stable?"":" (unstable)"))
 
@@ -41,7 +41,30 @@ async function req_blog(link) {
 	// get raw data
 	let data = await get_content(link.slice(0,-1)+".txt")
 	// format markdown
-	return data
+	return "<div class='card'>"+format_markdown(data)+"</div>"
+}
+async function format_markdown(text) {
+	let formatted = ""
+	for(let line of text.split('\n'))
+	{
+		formatted += format_markdown_line(line)
+	}
+	return formatted
+}
+async function format_markdown_line(line) {
+	// headings
+	if(line.startsWith('######'))
+		line = "<h6>"+line.slice(7,-0)+"</h6>"
+	else if(line.startsWith('#####'))
+		line = "<h5>"+line.slice(7,-0)+"</h5>"
+	else if(line.startsWith('####'))
+		line = "<h4>"+line.slice(7,-0)+"</h4>"
+	else if(line.startsWith('###'))
+		line = "<h3>"+line.slice(7,-0)+"</h3>"
+	else if(line.startsWith('##'))
+		line = "<h2>"+line.slice(7,-0)+"</h2>"
+	else if(line.startsWith('#'))
+		line = "<h1>"+line.slice(7,-0)+"</h1>"
 }
 
 
