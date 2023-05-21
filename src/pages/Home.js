@@ -6,7 +6,7 @@ const Home = () => {
         <h1 className="heading">stockmann.dev</h1>
         <div className="card-primary-dark container-2col center" style={{maxWidth: "100em"}}>
             <div className="container" style={{maxWidth: "30em"}}>
-                <img src="" />
+                <img alt="404" src="" />
             </div>
             <div className="container padding-l center" style={{width: "100%"}}>
                 <h1 className="center digitalt" style={{fontSize: "5em", margin: 0}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
