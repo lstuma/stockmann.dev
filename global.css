@@ -34,7 +34,7 @@
 }
 
 #content {
-	margin: 17em 2em;
+	margin: 10em 2em;
 }
 
 #footer-bottom {
@@ -55,6 +55,7 @@
 */
 
 body {
+	oveflow-x: hidden;
 	font-family: Monsterrat;
 	background-color: black;
 	color: white;
@@ -125,14 +126,14 @@ a {
 }
 
 .article {
-	margin-top: -12em !important;
+	margin-top: -18em !important;
 }
 
 .article-banner {
 	position: relative;
 	left: -3em;
 	right: -3em;
-	top: -2em;
+	top: -9.5em;
 	width: 108%;
 	height: auto;
 	background-color: purple;
