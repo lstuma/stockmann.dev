@@ -37,7 +37,6 @@ hr {
     position: relative;
     top: -0.5em; left: -0.5em; bottom: 0; right: 0;
     width: 100vw;
-    height: 100vh;
     margin: 0; padding: 0;
     padding-bottom: 5em;
     overflow-y: scroll;
@@ -52,6 +51,7 @@ header {
     padding: 0.5em 1em 1em;
     display: inline-flex;
     width: 100%;
+    border-bottom: 0.1em solid #121014;
 }
 .navbar {
 }
@@ -71,6 +71,7 @@ footer {
     position: absolute;
     height: 2.5em;
     bottom: 0;
+    margin-top: 2.5em;
     left: 50%; transform:translate(-50%);
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
@@ -205,3 +206,27 @@ img {
 .round { border-radius: 0.5em; }
 .rounder { border-radius: 2em; }
 .round-pill { border-radius: 100em; }
+
+/*
+** blog
+*/
+.article {
+    margin-top: 15vw;
+}
+.article-banner {
+    position: absolute;
+    z-index: -5;
+    width: 100vw;
+    height: 20vw;
+    background-color: #6614d9;
+    display: grid;
+}
+.article-heading {
+    font-size: 7vw;
+    height: 10vw;
+    overflow: hidden;
+    font-family: Inter;
+    font-variant: all-petite-caps;
+    justify-self: center;
+    margin-top: 4vw;
+}

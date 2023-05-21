@@ -3,8 +3,12 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-const fetchLink = (link) => {
-    return fetch(link).then(data => data.text())
+const fetchPost = async (link) => {
+    let text = await fetch(link).then(data => data.text())
+    let lines = text.split('\n')
+    text = text.slice(text.indexOf('\n'))
+
+    return {title: lines[0], text: text}
 }
 class Blog extends React.Component {
     constructor(props) {
@@ -34,12 +38,12 @@ class Blog extends React.Component {
             const article = queryParameters.get('a')
             if(!this.state.request_sent) {
                 this.setState({request_sent: true})
-                fetchLink(process.env.PUBLIC_URL+"/blog/articles/"+article+".md").then(data => this.setState({markdown: data}))
+                fetchPost(process.env.PUBLIC_URL+"/blog/articles/"+article+".md").then(data => this.setState({markdown: data.text, title: data.title}))
             }
             return (
                 <>
-                    <img alt="404" src="" className="blog-banner"/>
-                    <div className="container padding-sides-m">
+                    <div className="article-banner"> <h1 class="article-heading">{this.state.title}</h1></div>
+                    <div className="container article padding-sides-m">
                         <div className="card">
                             <ReactMarkdown children={this.state.markdown} remarkPlugins={[remarkGfm]} />
                         </div>
