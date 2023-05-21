@@ -1,9 +1,15 @@
+// imports
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+// components
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-import './global.css';
+// pages
+import Home from './pages/Home'
+import Blog from './pages/Blog'
+
 
 function App() {
   return (
@@ -11,10 +17,10 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path='/' exact element={<p>Test</p>}/>
+          <Route path='/' exact element={<Home />}/>
         </Routes>
         <Routes>
-          <Route path='/blog/' element={<p>Blog Test</p>}/>
+          <Route path='/blog/' element={<Blog />}/>
         </Routes>
         <Footer />
       </div>

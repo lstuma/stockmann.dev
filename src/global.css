@@ -15,21 +15,41 @@ html {
     background-color: #121014;
     color: #f3f1f4;
     font-family: Monsterrat;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
 a {
     color: #f3f1f4;
     text-decoration: none;
+    cursor: pointer;
+}
+
+hr {
+    border: #251f28 0.3em solid;
 }
 
 
 /*
 // header
 */
+#root {
+    position: relative;
+    top: -0.5em; left: -0.5em; bottom: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0; padding: 0;
+    padding-bottom: 5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 5em;
+}
 header {
+    position: fixed;
     background-color: #251f28;
-    padding: 0.5em 1em;
+    top: 0;
+    left: 0;
+    padding: 0.5em 1em 1em;
     display: inline-flex;
     width: 100%;
 }
@@ -49,14 +69,50 @@ header {
 */
 footer {
     position: absolute;
+    height: 2.5em;
     bottom: 0;
     left: 50%; transform:translate(-50%);
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 0.4em;
 }
 .footer-item {
     justify-self: center;
+}
+
+/*
+// containers
+*/
+.container { display: grid; }
+.container-2col, .container-3col {
+    display: inline-grid;
+    justify-content: center;
+    grid-gap: 3em;
+}
+.container-2col { grid-template-columns: 1fr 1fr; }
+.container-3col { grid-template-columns: 1fr 1fr 1fr; }
+
+/*
+// cards
+*/
+
+.card, .card-dark, .card-dark-inverted, .card-inverted, .card-white, .card-white-inverted, .card-primary, .card-primary-dark, .card-accent {
+    padding: 0.5em 1.5em;
+    display: grid;
+    border-radius: 0.5em;
+}
+.card { background-color: #251f28; }
+.card-inverted { border: #1c181f 0.4em solid; }
+.card-dark { background-color: #1c181f; }
+.card-dark-inverted { border: #16101E 0.3em solid; }
+.card-white-inverted { border: #f3f1f4 0.3em solid; }
+.card-primary { background-color: #6614d9; }
+.card-primary-dark { background-color: #16101E; }
+.card-white {
+    background-color: #f3f1f4;
+    color: #121014;
+}.card-accent {
+    background-color: #97cb4d;
+    color: #121014;
 }
 
 /*
@@ -69,8 +125,9 @@ button {
     background-color: #6614d9;
     border: 0;
     border-radius: 0.5em;
-    padding: 0.5em 1em;
+    padding: 0.75em 1em;
     transition: 0.2s;
+    cursor: pointer;
 }
 button:hover {
     background-color: #4f1cbd;
@@ -103,3 +160,48 @@ img {
     transform: translateY(0.15em);
     margin: 0 0.2em;
 }
+
+/*
+// text highlighting (blog mainly)
+*/
+.heading {
+    margin-top: 1em; margin-bottom: 1em;
+    justify-self: center;
+    font-family: Monsterrat;
+    font-weight: bold;
+    font-size: 2em;
+}
+.code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*
+// styling
+*/
+.margin-sm { margin: 1.5em 1em; }
+.margin-m { margin: 3em 2em; }
+.margin-l { margin: 7.5em 5em; }
+
+.padding-sm { padding: 1.5em 1em; }
+.padding-m { padding: 3em 2em; }
+.padding-l { padding: 7.5em 5em; }
+
+.padding-sides-sm { padding-left: 1em; padding-right: 1em; }
+.padding-sides-m { padding-left: 2em; padding-right: 2em; }
+.padding-sides-l { padding-left: 5em; padding-right: 5em;}
+
+.center { justify-self: center; }
+.left { justify-self: start; }
+.right { justify-self: end; }
+
+.digitalt { font-family: Digitalt; }
+.monsterrat { font-family: Monsterrat; font-weight: normal; }
+.inter { font-family: Inter; }
+
+.bold { font-weight: bold; }
+.bolder { font-weight: bolder; }
+
+.round { border-radius: 0.5em; }
+.rounder { border-radius: 2em; }
+.round-pill { border-radius: 100em; }
