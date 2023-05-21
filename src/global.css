@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Digitalt';
+    src: url("../public/fonts/Digitalt.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("../public/fonts/Inter.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Monsterrat';
+    src: url("../public/fonts/Monsterrat.ttf") format("truetype");
+}
+
+html {
+    background-color: #121014;
+    color: #f3f1f4;
+    font-family: Monsterrat;
+    overflow-x: hidden;
+}
+
+a {
+    color: #f3f1f4;
+    text-decoration: none;
+}
+
+
+/*
+// header
+*/
+header {
+    background-color: #251f28;
+    padding: 0.5em 1em;
+    display: inline-flex;
+    width: 100%;
+}
+.navbar {
+}
+.navbar-brand {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+.navbar-brand, .navbar-item {
+    margin-right: 1em;
+}
+
+/*
+// footer
+*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%; transform:translate(-50%);
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0.4em;
+}
+.footer-item {
+    justify-self: center;
+}
+
+/*
+// buttons
+*/
+button {
+    color: #f3f1f4;
+    font-family: Monsterrat;
+    font-weight: bold;
+    background-color: #6614d9;
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: #4f1cbd;
+}
+button:active {
+    background-color: #3823b0;
+}
+
+/*
+// misc
+*/
+img {
+    height: 1em; width: auto;
+}
+.icon-sm {
+    height: 1em;
+    with: auto;
+    transform: translateY(0.15em);
+    margin: 0 0.2em;
+}
+.icon-m {
+    height: 2em;
+    with: auto;
+    transform: translateY(0.55em);
+    margin: 0 0.5em;
+}
+.icon-l {
+    height: 5em;
+    with: auto;
+    transform: translateY(0.15em);
+    margin: 0 0.2em;
+}

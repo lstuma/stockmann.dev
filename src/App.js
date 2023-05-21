@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+import './global.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to <code>stockmann.dev</code>!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path='/' exact element={<p>Test</p>}/>
+        </Routes>
+        <Routes>
+          <Route path='/blog/' element={<p>Blog Test</p>}/>
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
