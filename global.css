@@ -134,6 +134,6 @@ a {
 	right: -3em;
 	top: 0;
 	width: 108%;
-	height: 18em;
+	height: auto;
 	background-color: purple;
 }
