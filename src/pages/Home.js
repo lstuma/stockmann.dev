@@ -17,13 +17,13 @@ const Home = () => {
         <div className="container container-2col">
             <div className="card-inverted right" style={{maxWidth: "30em"}}>
                 <h2 className="center">ARP Spoofing</h2>
-                <p className="inter bold"> Arp spooding attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
-                <Link to="/blog/001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <p className="inter bold"> Arp spoofing attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
+                <Link to="/blog/?a=001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
             </div>
             <div className="card-inverted left" style={{maxWidth: "30em"}}>
                 <h2 className="center">ARP Spoofing</h2>
-                <p className="inter bold"> Arp spooding attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
-                <Link to="/blog/001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <p className="inter bold"> Arp spoofing attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
+                <Link to="/blog/?a=001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
             </div>
             
         </div>
