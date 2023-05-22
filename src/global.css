@@ -25,6 +25,10 @@ a {
     cursor: pointer;
 }
 
+p {
+    font-size: 1.2em;
+}
+
 hr {
     border: #251f28 0.3em solid;
 }
@@ -140,9 +144,6 @@ button:active {
 /*
 // misc
 */
-img {
-    height: 1em; width: auto;
-}
 .icon-sm {
     height: 1em;
     with: auto;
@@ -180,21 +181,23 @@ img {
 /*
 // styling
 */
-.margin-sm { margin: 1.5em 1em; }
-.margin-m { margin: 3em 2em; }
-.margin-l { margin: 7.5em 5em; }
+.margin-sm { margin: 1.5em 1em !important; }
+.margin-m { margin: 3em 2em !important; }
+.margin-l { margin: 7.5em 5em !important; }
 
-.padding-sm { padding: 1.5em 1em; }
-.padding-m { padding: 3em 2em; }
-.padding-l { padding: 7.5em 5em; }
+.padding-sm { padding: 1.5em 1em !important; }
+.padding-m { padding: 3em 2em !important; }
+.padding-l { padding: 7.5em 5em !important; }
 
-.padding-sides-sm { padding-left: 1em; padding-right: 1em; }
-.padding-sides-m { padding-left: 2em; padding-right: 2em; }
-.padding-sides-l { padding-left: 5em; padding-right: 5em;}
+.padding-sides-sm { padding-left: 1em !important; padding-right: 1em !important; }
+.padding-sides-m { padding-left: 2em !important; padding-right: 2em !important; }
+.padding-sides-l { padding-left: 5em !important; padding-right: 5em !important; }
 
 .center { justify-self: center; }
 .left { justify-self: start; }
 .right { justify-self: end; }
+
+.middle { align-self: center; }
 
 .digitalt { font-family: Digitalt; }
 .monsterrat { font-family: Monsterrat; font-weight: normal; }
@@ -229,4 +232,9 @@ img {
     font-variant: all-petite-caps;
     justify-self: center;
     margin-top: 4vw;
+}
+.article-card {
+    padding: 0.5em 1.5em;
+    display: grid;
+    background-color: #251f28;
 }

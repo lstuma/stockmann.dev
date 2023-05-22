@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 // pages
 import Home from './pages/Home'
 import Blog from './pages/Blog'
+import Article from './pages/Article'
 
 
 function App() {
@@ -20,7 +21,10 @@ function App() {
           <Route path='/' exact element={<Home />}/>
         </Routes>
         <Routes>
-          <Route path='/blog/' element={<Blog />}/>
+          <Route path='/blog/' exact element={<Blog />}/>
+        </Routes>
+        <Routes>
+          <Route path='/blog/read/:article' element={<Article />}/>
         </Routes>
         <Footer />
       </div>
