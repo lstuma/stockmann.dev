@@ -1,7 +1,18 @@
 import { Link } from 'react-router-dom'
 import { BiLinkExternal } from 'react-icons/bi'
+import { fetchMeta } from "./Blog"
+import { useState } from 'react'
+
 
 const Home = () => {
+    const [state, setState] = useState({posts: []})
+    const [SentRequest, updateSentRequest] = useState(false)
+
+    if(!SentRequest) {
+        updateSentRequest(true)
+        fetchMeta().then(data => setState({posts: data}))
+    }
+
     return <div className="container padding-sides-m">
         <h1 className="heading">stockmann.dev</h1>
         <div className="card-primary-dark container-2col center" style={{maxWidth: "80em"}}>
@@ -14,19 +25,20 @@ const Home = () => {
             </div>
         </div>
         <h1 className="heading">Featured Blog Articles</h1>
+        {state.posts.length>0?
         <div className="container container-2col">
             <div className="card-inverted right" style={{maxWidth: "30em"}}>
-                <h2 className="center">ARP Spoofing</h2>
-                <p className="inter bold"> Arp spoofing attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
-                <Link to="/blog/read/001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <h2 className="center">{state.posts[0].title}</h2>
+                <p className="inter bold"> {state.posts[0].preview} </p>
+                <Link to={"/blog/read/"+state.posts[0].id} className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
             </div>
             <div className="card-inverted left" style={{maxWidth: "30em"}}>
-                <h2 className="center">ARP Spoofing</h2>
-                <p className="inter bold"> Arp spoofing attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network. </p>
-                <Link to="/blog/read/001" className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <h2 className="center">{state.posts[1].title}</h2>
+                <p className="inter bold"> {state.posts[1].preview} </p>
+                <Link to={"/blog/read/"+state.posts[1].id} className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
             </div>
-            
         </div>
+            :""}
     </div>
 }
 

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import React from 'react'
 
-const fetchMeta = async () => {
+export const fetchMeta = async () => {
     let text = await fetch(process.env.PUBLIC_URL+"/blog/articles/meta.csv").then(data => data.text())
     let posts = []
 
@@ -11,7 +11,7 @@ const fetchMeta = async () => {
         posts.push({title: data[0], id: data[1], preview: data[2]})
     }
 
-    return posts
+    return posts.reverse()
 }
 
 const Blog = () => {
@@ -23,8 +23,6 @@ const Blog = () => {
         fetchMeta().then(data => setState({posts: data}))
     }
 
-    console.log(state.posts)
-
     // group posts into columns and rows
     let col = 0
     let rows = []
@@ -34,8 +32,6 @@ const Blog = () => {
         rows[rows.length-1].push(post)
         col = ++col%2
     }
-
-    console.log(rows)
 
     return (
         <div className="container">
