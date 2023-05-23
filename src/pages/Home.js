@@ -10,7 +10,7 @@ const Home = () => {
             </div>
             <div className="container padding-l right" style={{width: "100%"}}>
                 <h1 className="center digitalt" style={{fontSize: "7em", margin: 0, fontWeight: "normal"}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
-                <a href="https://teamsmiley.org" ref="noreffer" target="_blank" className="center"><button style={{margin: "1em", fontSize: "1em"}}>Visit Site <BiLinkExternal style={{transform: "translateY(0.1em)"}} /></button></a>
+                <a href="https://teamsmiley.org" ref="noreferrer" target="_blank" className="center"><button style={{margin: "1em", fontSize: "1em"}}>Visit Site <BiLinkExternal style={{transform: "translateY(0.1em)"}} /></button></a>
             </div>
         </div>
         <h1 className="heading">Featured Blog Articles</h1>
