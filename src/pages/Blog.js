@@ -34,7 +34,7 @@ const Blog = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container padding-sides-sm no-mobile-padding">
             <h1 className="heading">stockmann.dev</h1>
             {rows.map((row) => (
                 <div className="container container-2col">
@@ -44,10 +44,10 @@ const Blog = () => {
                                 onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <h2 className="left">{row[0].title}</h2>
+                            <h2 className="left mobile-padding-sides-sm">{row[0].title}</h2>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <p className="inter bold">{row[0].preview}</p>
+                            <p className="inter bold mobile-padding-sides-sm">{row[0].preview}</p>
                         </Link>
                     </div>
                     {row.length>1?
@@ -57,10 +57,10 @@ const Blog = () => {
                                 onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[1].id} className="link">
-                            <h2 className="left">{row[1].title}</h2>
+                            <h2 className="left mobile-padding-sides-sm">{row[1].title}</h2>
                         </Link>
                         <Link to={"/blog/read/"+row[1].id} className="link">
-                            <p className="inter bold">{row[1].preview}</p>
+                            <p className="inter bold mobile-padding-sides-sm">{row[1].preview}</p>
                         </Link>
                     </div>:""}
                 </div>

@@ -13,14 +13,14 @@ const Home = () => {
         fetchMeta().then(data => setState({posts: data}))
     }
 
-    return <div className="container padding-sides-m">
+    return <div className="container no-mobile-padding padding-sides-m">
         <h1 className="heading">stockmann.dev</h1>
-        <div className="card-primary-dark container-2col center" style={{maxWidth: "80em"}}>
+        <div className="card-primary-dark container-2col center mobile-width-100" style={{maxWidth: "80em"}}>
             <div className="container" style={{maxWidth: "30em"}}>
-                <img alt="404" src={process.env.PUBLIC_URL+"/img/teamsmiley.svg"} style={{width: "auto", height: "20em"}} className="center middle" />
+                <img alt="404" src={process.env.PUBLIC_URL+"/img/teamsmiley.svg"} style={{width: "auto", height: "20em"}} className="no-mobile center middle" />
             </div>
-            <div className="container padding-l right" style={{width: "100%"}}>
-                <h1 className="center digitalt" style={{fontSize: "7em", margin: 0, fontWeight: "normal"}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
+            <div className="container no-mobile-padding padding-l right" style={{width: "100%"}}>
+                <h1 className="center digitalt mobile-textsize-h1" style={{fontSize: "7em", margin: 0, fontWeight: "normal"}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
                 <a href="https://teamsmiley.org" rel="noopener noreferrer" target="_blank" className="center"><button style={{margin: "1em", fontSize: "1em"}}>Visit Site <BiLinkExternal style={{transform: "translateY(0.1em)"}} /></button></a>
             </div>
         </div>

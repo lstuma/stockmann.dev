@@ -29,7 +29,7 @@ const Article = () => {
             <h1 className="article-heading">{state.title}</h1>
         </div>
         <div className="container article">
-            <div className="article-card" style={{padding: "2em 10em"}}>
+            <div className="article-card" >
                 <ReactMarkdown children={state.markdown} remarkPlugins={[remarkGfm]} />
             </div>
         </div>
