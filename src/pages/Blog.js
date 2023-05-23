@@ -8,16 +8,10 @@ const fetchMeta = async () => {
 
     for(let line of text.split('\n')) {
         let data = line.split(',')
-        posts.push({title: data[0], id: data[1], preview: await fetchPreview(data[1])})
+        posts.push({title: data[0], id: data[1], preview: data[2]})
     }
 
     return posts
-}
-
-const fetchPreview = async (id) => {
-    let text = await fetch(process.env.PUBLIC_URL+"/blog/articles/"+id+".md").then(data => data.text())
-    text = text.split('\n')[1]
-    return text.slice(0, text.indexOf(' ', 100)) + ".."
 }
 
 const Blog = () => {
@@ -50,18 +44,20 @@ const Blog = () => {
                 <div className="container container-2col">
                     <div className="card-invisible right" style={{maxWidth: "40em", width: "100%", marginBottom: "2em"}}>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/blog/articles/"+row[0].id+".png"}/>
+                            <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/img/articles/"+row[0].id+".webp"}
+                                onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
                             <h2 className="left">{row[0].title}</h2>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <p className="inter bold padding-sides-sm">{row[0].preview}</p>
+                            <p className="inter bold">{row[0].preview}</p>
                         </Link>
                     </div>
                     <div className="card-invisible left" style={{maxWidth: "40em", width: "100%", marginBottom: "2em"}}>
                         <Link to={"/blog/read/"+row[1].id} className="link">
-                            <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/blog/articles/"+row[1].id+".png"}/>
+                            <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/img/articles/"+row[1].id+".webp"}
+                                onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[1].id} className="link">
                             <h2 className="left">{row[1].title}</h2>

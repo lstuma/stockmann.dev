@@ -1,8 +1,8 @@
-Arp Spoofing,001
-VLAN Hopping,002
-WIFI Hacking,003
-The power of Nmap,004
-NotPetya,005
-WannaCry,006
-EternalBlue,007
-Metasploit Framework,008
+Arp Spoofing,001,Arp spoofing attacks utilize the ARP (Address Resolution Protocol) to conduct man in the middle attacks upon targets inside of a network.
+VLAN Hopping,002,VLAN Hopping utilize loose configurations at VLAN Switches to allow attackers to access other networks connected to a switch through the use of impersonating a switch/ router.
+WIFI Hacking,003,
+The power of Nmap,004,
+NotPetya,005,
+WannaCry,006,
+EternalBlue,007,
+Metasploit Framework,008,

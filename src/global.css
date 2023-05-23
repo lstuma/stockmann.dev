@@ -165,7 +165,7 @@ button:active {
     margin: 0 0.2em;
 }
 .link { transition: 0.5s; }
-.link:hover { color: #6614d9; transition: 0.1s;  }
+.link:hover { color: #1452d9; transition: 0.1s;  }
 .img-link::before { content: "adw"; width: 100%; height: 100%; background-color: #000000; transition: 0.1s; z-index: 5; }
 .img-link::before:hover { background-color: #000000; transition: 0.5s;  }
 /*
