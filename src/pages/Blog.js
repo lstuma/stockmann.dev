@@ -54,6 +54,7 @@ const Blog = () => {
                             <p className="inter bold">{row[0].preview}</p>
                         </Link>
                     </div>
+                    {row.length>1?
                     <div className="card-invisible left" style={{maxWidth: "40em", width: "100%", marginBottom: "2em"}}>
                         <Link to={"/blog/read/"+row[1].id} className="link">
                             <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/img/articles/"+row[1].id+".webp"}
@@ -65,7 +66,7 @@ const Blog = () => {
                         <Link to={"/blog/read/"+row[1].id} className="link">
                             <p className="inter bold">{row[1].preview}</p>
                         </Link>
-                    </div>
+                    </div>:""}
                 </div>
             ))}
         </div>
