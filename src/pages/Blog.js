@@ -35,7 +35,7 @@ const Blog = () => {
     let col = 0
     let rows = []
     for(let post of state.posts) {
-        if(col==0)
+        if(col===0)
             rows.push([])
         rows[rows.length-1].push(post)
         col = ++col%2
