@@ -1,0 +1,12 @@
+/*
+// mobile was is curse for web development
+*/
+@media (max-width:1400px)
+{
+    #teamsmiley-container-2 {
+        transform: translateX(-2em);
+    }
+    .featured-article {
+        border-bottom: #121014 0.5em solid;
+    }
+}

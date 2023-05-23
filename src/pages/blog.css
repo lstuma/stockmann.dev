@@ -1,0 +1,10 @@
+/*
+// mobile was is curse for web development
+*/
+@media (max-width:1400px)
+{
+    .blog-article-card {
+        margin-bottom: 0.5em !important;
+        background-color: #251f28 !important;
+    }
+}
