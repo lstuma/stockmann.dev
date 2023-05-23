@@ -24,7 +24,6 @@ const fetchPreview = async (id) => {
 const Blog = () => {
     const [state, setState] = useState({posts: []})
     const [SentRequest, updateSentRequest] = useState(false)
-    let { article } = useParams()
 
     if(!SentRequest) {
         updateSentRequest(true)
