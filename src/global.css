@@ -171,8 +171,6 @@ button:active {
 }
 .link { transition: 0.5s; }
 .link:hover { color: #1452d9; transition: 0.1s;  }
-.img-link::before { content: "adw"; width: 100%; height: 100%; background-color: #000000; transition: 0.1s; z-index: 5; }
-.img-link::before:hover { background-color: #000000; transition: 0.5s;  }
 /*
 // text highlighting (blog mainly)
 */
@@ -226,6 +224,8 @@ button:active {
 .article {
     margin-top: 15vw;
 }
+.article a { transition: 0.5s; }
+.article a:hover { color: #1452d9; transition: 0.1s; }
 .article-banner {
     position: absolute;
     z-index: -5;
@@ -244,7 +244,7 @@ button:active {
     margin-top: 4vw;
 }
 .article-card {
-    padding: 2em 10em;
+    padding: 2em 30em;
     display: grid;
     background-color: #251f28;
 }
