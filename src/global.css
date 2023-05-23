@@ -50,6 +50,7 @@ hr {
     margin-top: 5em;
 }
 header {
+    z-index: 10;
     position: fixed;
     background-color: #251f28;
     top: 0;
