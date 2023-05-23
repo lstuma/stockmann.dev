@@ -9,8 +9,8 @@ const Home = () => {
                 <img alt="404" src={process.env.PUBLIC_URL+"/img/teamsmiley.svg"} style={{width: "auto", height: "20em"}} className="center middle" />
             </div>
             <div className="container padding-l right" style={{width: "100%"}}>
-                <h1 className="center digitalt" style={{fontSize: "7em", margin: 0}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
-                <a href="https://teamsmiley.org" className="center"><button style={{margin: "1em", fontSize: "1em"}}>Visit Site <BiLinkExternal style={{transform: "translateY(0.1em)"}} /></button></a>
+                <h1 className="center digitalt" style={{fontSize: "7em", margin: 0, fontWeight: "normal"}}>Team<span style={{color:"#ff002b"}}>Smiley</span></h1>
+                <a href="https://teamsmiley.org" target="_blank" className="center"><button style={{margin: "1em", fontSize: "1em"}}>Visit Site <BiLinkExternal style={{transform: "translateY(0.1em)"}} /></button></a>
             </div>
         </div>
         <h1 className="heading">Featured Blog Articles</h1>
