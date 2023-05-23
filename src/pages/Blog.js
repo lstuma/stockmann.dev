@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import React from 'react'
 
 const fetchMeta = async () => {
