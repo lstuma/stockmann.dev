@@ -13,9 +13,9 @@ const Home = () => {
         fetchMeta().then(data => setState({posts: data}))
     }
 
-    return <div className="container no-mobile-padding padding-sides-m">
+    return <div className="container padding-sides-m">
         <h1 className="heading">stockmann.dev</h1>
-        <div className="card-primary-dark container-2col center mobile-width-100" style={{maxWidth: "80em"}}>
+        <div className="card-primary-dark container-2col center mobile-width-100 round" style={{maxWidth: "80em"}}>
             <div className="container" style={{maxWidth: "30em"}}>
                 <img alt="404" src={process.env.PUBLIC_URL+"/img/teamsmiley.svg"} style={{width: "auto", height: "20em"}} className="no-mobile center middle" />
             </div>
@@ -28,14 +28,14 @@ const Home = () => {
         {state.posts.length>0?
         <div className="container container-2col">
             <div className="card-inverted featured-article right" style={{maxWidth: "30em"}}>
-                <h2 className="center">{state.posts[0].title}</h2>
+                <h2 className="center text-center">{state.posts[0].title}</h2>
                 <p className="inter bold"> {state.posts[0].preview} </p>
-                <Link to={"/blog/read/"+state.posts[0].id} className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <Link to={"/blog/read/"+state.posts[0].id} className="center"><button className="featured-article-button" >Go to article</button></Link>
             </div>
             <div className="card-inverted featured-article left" style={{maxWidth: "30em"}}>
-                <h2 className="center">{state.posts[1].title}</h2>
+                <h2 className="center text-center">{state.posts[1].title}</h2>
                 <p className="inter bold"> {state.posts[1].preview} </p>
-                <Link to={"/blog/read/"+state.posts[1].id} className="center"><button style={{margin: "1em"}}>Go to article</button></Link>
+                <Link to={"/blog/read/"+state.posts[1].id} className="center"><button className="featured-article-button" >Go to article</button></Link>
             </div>
         </div>
             :""}

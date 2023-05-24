@@ -1,12 +1,31 @@
+.featured-article-button {
+    margin: 1em;
+}
+
 /*
 // mobile was is curse for web development
 */
 @media (max-width:1400px)
 {
-    #teamsmiley-container-2 {
-        transform: translateX(-2em);
-    }
     .featured-article {
-        border-bottom: #121014 0.5em solid;
+        padding-bottom: 0;
+        margin-bottom: 1em;
+    }
+    .featured-article p {
+        font-size: 1em; font-weight: normal; margin-top: 0;
+    }
+
+    .featured-article-button {
+        margin: 0;
+    }
+
+    .card, .card-dark, .card-dark-inverted, .card-inverted, .card-white, .card-white-inverted, .card-primary, .card-primary-dark, .card-accent, .card-primary-dark-inverted {
+        padding: 0.8em 1.5em 1.5em;
+        display: grid;
+        max-width: 75vw !important;
+    }
+
+    .padding-sides-m {
+        transform: translateX(-4em);
     }
 }
