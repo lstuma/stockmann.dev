@@ -287,6 +287,14 @@ button:active {
         color: #121014;
     }
 
+    .article img {
+        width: 90vw;
+    }
+    .article code {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
     /*
     // foter
     */
