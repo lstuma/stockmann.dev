@@ -17,7 +17,7 @@ const Article = () => {
     const [SentRequest, updateSentRequest] = useState(false)
     let { article } = useParams()
     
-    useEffect(() => {document.title = state.title + " - stockmann.dev";}, [])
+    useEffect(() => {document.title = " Blog - stockmann.dev";}, [])
 
     if(!SentRequest) {
         updateSentRequest(true)
