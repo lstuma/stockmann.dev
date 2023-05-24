@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { BiLinkExternal } from 'react-icons/bi'
 import { fetchMeta } from "./Blog"
@@ -12,6 +13,8 @@ const Home = () => {
         updateSentRequest(true)
         fetchMeta().then(data => setState({posts: data}))
     }
+
+    useEffect(() => {document.title = "stockmann.dev";}, [])
 
     return <div className="container padding-sides-m">
         <h1 className="heading">stockmann.dev</h1>

@@ -1,7 +1,6 @@
-//import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -18,6 +17,8 @@ const Article = () => {
     const [SentRequest, updateSentRequest] = useState(false)
     let { article } = useParams()
     
+    useEffect(() => {document.title = state.title + " - stockmann.dev";}, [])
+
     if(!SentRequest) {
         updateSentRequest(true)
         fetchPost(process.env.PUBLIC_URL+"/blog/articles/"+article+".md").then(data => setState({markdown: data.markdown, title: data.title}))

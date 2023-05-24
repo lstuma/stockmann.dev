@@ -1,6 +1,6 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import React from 'react'
 import './blog.css';
 
 export const fetchMeta = async () => {
@@ -23,6 +23,8 @@ const Blog = () => {
         updateSentRequest(true)
         fetchMeta().then(data => setState({posts: data}))
     }
+
+    useEffect(() => {document.title = "Blog - stockmann.dev";}, [])
 
     // group posts into columns and rows
     let col = 0
