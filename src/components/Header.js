@@ -9,7 +9,7 @@ const Header = ({username}) => {
                     <span className="navbar-brand">stockmann.dev</span>
                 </Link>
                 <Link to='/blog/' className="navbar-item">blog</Link>
-                <button style={{justifySelf: "end"}}>Subscribe!</button>
+                {/*<button style={{justifySelf: "end"}}>Subscribe!</button>*/}
             </nav>
         </header>
     )
