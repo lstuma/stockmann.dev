@@ -5,6 +5,13 @@
 {
     .blog-article-card {
         margin-bottom: 0.5em !important;
-        background-color: #251f28 !important;
     }
+    .blog-article-card { width: 100vw; }
+    .article-img { justify-self: center; width: 90%;}
+    .article-card { padding: 0 1em; }
+    .container-2col { justify-self: center; padding: 0;}
+    .blog-article-card { max-width: none; transform: translateX(-2em); }
+    .link { display: grid;}
+    .blog-article-title { margin-bottom: 0; }
+    .blog-article-preview { margin-top: 0.3em; font-weight: normal; margin-bottom: 3em; }
 }

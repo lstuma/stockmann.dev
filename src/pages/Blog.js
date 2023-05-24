@@ -35,33 +35,33 @@ const Blog = () => {
     }
 
     return (
-        <div className="container padding-sides-sm no-mobile-padding">
+        <div className="container padding-sides-sm no-mobile-padding center">
             <h1 className="heading">stockmann.dev</h1>
             {rows.map((row) => (
                 <div className="container container-2col">
-                    <div className="card-invisible blog-article-card right" style={{maxWidth: "40em", width: "100%", marginBottom: "2em"}}>
+                    <div className="card-invisible blog-article-card right" style={{width: "100%", marginBottom: "2em"}}>
                         <Link to={"/blog/read/"+row[0].id} className="link">
                             <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/img/articles/"+row[0].id+".webp"}
                                 onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <h2 className="left mobile-padding-sides-sm">{row[0].title}</h2>
+                            <h2 className="left mobile-padding-sides-sm no-mobile-padding-sides blog-article-title">{row[0].title}</h2>
                         </Link>
                         <Link to={"/blog/read/"+row[0].id} className="link">
-                            <p className="inter bold mobile-padding-sides-sm">{row[0].preview}</p>
+                            <p className="inter bold mobile-padding-sides-sm no-mobile-padding-sides blog-article-preview">{row[0].preview}</p>
                         </Link>
                     </div>
                     {row.length>1?
-                    <div className="card-invisible blog-article-card left" style={{maxWidth: "40em", width: "100%", marginBottom: "2em"}}>
+                    <div className="card-invisible blog-article-card left" style={{width: "100%", marginBottom: "2em"}}>
                         <Link to={"/blog/read/"+row[1].id} className="link">
                             <img alt="404" className="article-img round img-link" src={process.env.PUBLIC_URL+"/img/articles/"+row[1].id+".webp"}
                                 onError={(e) => {e.target.onerror=null; e.target.src=process.env.PUBLIC_URL+"/img/articles/default_cover.webp"}}/>
                         </Link>
                         <Link to={"/blog/read/"+row[1].id} className="link">
-                            <h2 className="left mobile-padding-sides-sm">{row[1].title}</h2>
+                            <h2 className="left mobile-padding-sides-sm no-mobile-padding-sides blog-article-title">{row[1].title}</h2>
                         </Link>
                         <Link to={"/blog/read/"+row[1].id} className="link">
-                            <p className="inter bold mobile-padding-sides-sm">{row[1].preview}</p>
+                            <p className="inter bold mobile-padding-sides-sm no-mobile-padding-sides blog-article-preview">{row[1].preview}</p>
                         </Link>
                     </div>:""}
                 </div>

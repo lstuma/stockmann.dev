@@ -252,6 +252,8 @@ button:active {
     width: 100%;
 }
 
+.blog-article-card {max-width: 40em;}
+
 /*
 // mobile was is curse for web development
 */
@@ -295,12 +297,10 @@ button:active {
     /*
     // styling
     */
-    .no-mobile-padding { padding-left: 0 !important; padding-right: 0 !important; }
+    .no-mobile-padding-sides { padding-left: 0 !important; padding-right: 0 !important; }
     .no-mobile-padding { padding: 0 !important; }
-    .mobile-padding-sides-sm { padding-left: 1em !important; padding-right: 1em !important; }
+    .mobile-padding-sides-sm { padding-left: 5vw !important; padding-right: 5vw !important; }
     .mobile-width-100 { width: 100%; }
-    .article-img { border-radius: 0 !important; }
-    .article-card { padding: 0 1em; }
 
     /*
     // text highlighting (blog mainly)
