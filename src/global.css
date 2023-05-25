@@ -50,13 +50,15 @@ hr {
     margin-top: 5em;
 }
 header {
+    align-content: center;
+    display: grid;
+    height: 3em;
     z-index: 10;
     position: fixed;
     background-color: #251f28;
     top: 0;
     left: 0;
     padding: 0.5em 1em 1em;
-    display: inline-flex;
     width: 100%;
     border-bottom: 0.1em solid #121014;
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import './article.css';
 
 const fetchPost = async (link) => {
     let text = await fetch(link).then(data => data.text())
