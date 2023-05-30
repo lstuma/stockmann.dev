@@ -1,8 +1,7 @@
 // imports
 import React, {useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { useCookies } from 'react-cookie'
-
+import Cookies from 'universal-cookie'
 // components
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -17,21 +16,19 @@ import './lighttheme.css'
 var theme = 1
 
 
+const cookies = new Cookies()
+const html = document.querySelector('html')
+
 function updateTheme() {
-  for(let i = 0; i < themeStylesheets.length; i++) themeStylesheets[i].disabled = i!==theme
-  themeStylesheets[theme].disabled = false
+  if(theme===0 && !html.classList.contains('light')) html.classList.add('light')
+  else if(theme===1 && html.classList.contains('light')) html.classList.remove('light')
 }
 
-var themeStylesheets = []
-
 function App() {
-  const [cookies, setCookie] = useCookies(['theme']);
-  if('theme' in cookies) theme = cookies['theme']
-  useEffect(() => {
-    themeStylesheets.push(document.styleSheets[document.styleSheets.length-1])
-    themeStylesheets.push(document.styleSheets[document.styleSheets.length-2])
-    updateTheme()
-  })
+  if('theme' in cookies.getAll()) theme = Number(cookies.get('theme'))
+  if(isNaN(theme)) theme = 0
+
+  useEffect(updateTheme)
 
   return (
     <Router>
@@ -39,7 +36,7 @@ function App() {
         <Header toggleTheme={() => {
           theme = ++theme%2
           updateTheme()
-          setCookie('theme', theme, {'maxAge':2147483647})
+          cookies.set('theme', theme, {'maxAge':2147483647, 'path':'/', 'SamSite':'True'})
         }} currentTheme={theme}/>
         <Routes>
           <Route path='/' exact element={<Home />}/>

@@ -1,81 +1,82 @@
-html {
+html.light {
     background-color: #D9D9D9;
     color: #1a1c1c;
 }
-a {
+.light a {
     color: #1a1c1c;
 }
-hr {
+.light hr {
     border: #2DC5EF 0.3em solid;
 }
 /*
 // header
 */
-header {
+.light header {
     background-color: #F0F0F0;
     border-bottom: 0.1em solid #D9D9D9;
 }
-.navbar-brand, .navbar-item {
+.light .navbar-brand, .light .navbar-item {
     color: #1a1c1c;
 }
 /*
 // cards
 */
-.card { background-color: #2DC5EF; }
-.card-i1 { border: #F0F0F0 0.4em solid; }
-.card-2 { background-color: #AAAAAA; }
-.card-i2 { border: #AAAAAA 0.3em solid; }
-.card-i3 { border: #1a1c1c 0.3em solid; }
-.card-4 { background-color: #2DC5EF; }
-.card-5 { background-color: #F0F0F0; }
-.card-i5 { border: #706F6F 0.3em solid; }
-.card-3 {
+.light .card { background-color: #2DC5EF; }
+.light .card-i1 { border: #F0F0F0 0.4em solid; }
+.light .card-2 { background-color: #AAAAAA; }
+.light .card-i2 { border: #AAAAAA 0.3em solid; }
+.light .card-i3 { border: #1a1c1c 0.3em solid; }
+.light .card-4 { background-color: #2DC5EF; }
+.light .card-5 { background-color: #F0F0F0; }
+.light .card-i5 { border: #706F6F 0.3em solid; }
+.light .card-3 {
     background-color: #1a1c1c;
     color: #121014;
-}.card-accent {
+}
+.light .card-accent {
     background-color: #97cb4d;
     color: #121014;
 }
 /*
 // buttons
 */
-button {
+.light button {
     color: #1a1c1c;
     background-color: #0099FF;
     box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.2);
 }
-button:hover {
+.light button:hover {
     background-color: #007BFF;
 }
-button:active {
+.light button:active {
     background-color: #0059FF;
 }
-.btn-b1 {
+.light .btn-b1 {
     background-color: #F8F8F8;
     box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.1);
 }
-.btn-b1:hover {
+.light .btn-b1:hover {
     background-color: #F0F0F0;
 }
-.btn-b1:active {
+.light .btn-b1:active {
     background-color: #E9E9E9;
 }
 /*
 ** icons
 */
-.icon-sm { color: black; }
+.light .icon-sm { color: black; }
 /*
 ** blog
 */
-.article a:hover { color: #1452d9; }
-.article-banner {
+.light .article a:hover { color: #1452d9; }
+.light .article-banner {
     background-color: #0099FF;
 }
-.article-heading {
+.light .article-heading {
     color: #1a1c1c;
     background-color: #0099FF;
 }
-.article-card {
+.light .article-card {
     background-color: #E9E9E9;
 }
 /*
