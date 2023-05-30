@@ -16,24 +16,34 @@ html {
     color: #f3f1f4;
     font-family: Monsterrat;
     overflow-x: hidden;
+    transition: 0.5s;
 }
-
+body {
+    transition: 0.5s;
+}
+div {
+    transition: 0.5s;
+}
 a {
     color: #f3f1f4;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 p {
     font-size: 1.2em;
+    transition: 0.5s;
 }
 
 img {
     max-width: 100%;
+    transition: 0.5s;
 }
 
 hr {
     border: #251f28 0.3em solid;
+    transition: 0.5s;
 }
 
 
@@ -61,6 +71,10 @@ header {
     padding: 0.5em 1em 1em;
     width: 100%;
     border-bottom: 0.1em solid #121014;
+    transition: 0.5s;
+}
+header .icon-m {
+    margin-right: 1.5vw;
 }
 .navbar {
 }
@@ -70,7 +84,7 @@ header {
     font-size: 1.25em;
 }
 .navbar-brand, .navbar-item {
-    margin-right: 1em;
+    margin-right: 1.5vw;
 }
 
 /*
@@ -105,22 +119,23 @@ footer {
 // cards
 */
 
-.card, .card-dark, .card-dark-inverted, .card-inverted, .card-white, .card-white-inverted, .card-primary, .card-primary-dark, .card-accent, .card-primary-dark-inverted {
+.card, .card-2, .card-i2, .card-i1, .card-3, .card-i3, .card-4, .card-5, .card-accent, .card-i5 {
     max-width: 100%;
     position: relative;
     padding: 0.5em 1.5em;
     display: grid;
     border-radius: 0.5em;
+    transition: 0.5s;
 }
 .card { background-color: #251f28; }
-.card-inverted { border: #1c181f 0.4em solid; }
-.card-dark { background-color: #1c181f; }
-.card-dark-inverted { border: #1c181f 0.3em solid; }
-.card-white-inverted { border: #f3f1f4 0.3em solid; }
-.card-primary { background-color: #6614d9; }
-.card-primary-dark { background-color: #1c1326; }
-.card-primary-dark-inverted { border: #1c1326 0.3em solid; }
-.card-white {
+.card-i1 { border: #1c181f 0.4em solid; }
+.card-2 { background-color: #1c181f; }
+.card-i2 { border: #1c181f 0.3em solid; }
+.card-i3 { border: #f3f1f4 0.3em solid; }
+.card-4 { background-color: #6614d9; }
+.card-5 { background-color: #1c1326; }
+.card-i5 { border: #1c1326 0.3em solid; }
+.card-3 {
     background-color: #f3f1f4;
     color: #121014;
 }.card-accent {
@@ -231,6 +246,7 @@ button:active {
 */
 .article {
     margin-top: 15vw;
+    transition: 0.5s;
 }
 .article p, .article code, .article li { font-size: 1.35em; }
 .article a { transition: 0.5s; }
@@ -242,6 +258,7 @@ button:active {
     height: 20vw;
     background-color: #6614d9;
     display: grid;
+    justify-content: center;
 }
 .article-heading {
     font-size: 7vw;
@@ -249,8 +266,8 @@ button:active {
     overflow: hidden;
     font-family: Inter;
     font-variant: all-petite-caps;
-    justify-self: center;
-    margin-top: 4vw;
+    margin-top: .5em;
+    align-self: center;
 }
 .article-card {
     padding: 2em 30em;
