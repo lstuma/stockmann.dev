@@ -259,6 +259,7 @@ button:active {
     background-color: #6614d9;
     display: grid;
     justify-content: center;
+    transition: 0.5s;
 }
 .article-heading {
     font-size: 7vw;
@@ -268,7 +269,7 @@ button:active {
     font-variant: all-petite-caps;
     margin-top: .5em;
     align-self: center;
-    transition: 0.5s;
+    transition: 2.5s;
 }
 .article-card {
     padding: 2em 30em;
@@ -277,6 +278,8 @@ button:active {
 }
 .article-img {
     width: 100%;
+    transition: 0.5s;
+
 }
 
 .blog-article-card {max-width: 40em;}
