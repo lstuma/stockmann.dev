@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     themeStylesheets.push(document.styleSheets[document.styleSheets.length-1])
     themeStylesheets.push(document.styleSheets[document.styleSheets.length-2])
-    updateTheme()
+//    updateTheme()
   })
 
   return (
