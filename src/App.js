@@ -1,5 +1,5 @@
 // imports
-import React from 'react'
+import React, {useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 // components
@@ -12,11 +12,28 @@ import Blog from './pages/Blog'
 import Article from './pages/Article'
 
 
+import './components/darktheme.css'
+import './components/lighttheme.css'
+var theme = 1
+
+function toggleTheme() {
+  themeStylesheets.forEach((stylesheet) => stylesheet.disabled = true)
+  theme = ++theme%2
+  themeStylesheets[theme].disabled = false
+}
+
+var themeStylesheets = []
+
 function App() {
+  useEffect(() => {
+    themeStylesheets.push(document.styleSheets[document.styleSheets.length-1])
+    themeStylesheets.push(document.styleSheets[document.styleSheets.length-2])
+    toggleTheme()
+  })
   return (
     <Router>
       <div className="container">
-        <Header />
+        <Header toggleTheme={toggleTheme} currentTheme={theme}/>
         <Routes>
           <Route path='/' exact element={<Home />}/>
         </Routes>

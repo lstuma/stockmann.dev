@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
+import { FaSun } from 'react-icons/fa'
+import { TbMoonFilled } from 'react-icons/tb'
+import { useState } from 'react'
 
-const Header = ({username}) => {
+const Header = ({username, currentTheme, toggleTheme}) => {
+    const [theme, setTheme] = useState(currentTheme)
     return (
         <header>
             <nav className="navbar">
@@ -10,6 +14,7 @@ const Header = ({username}) => {
                 </Link>
                 <Link to='/blog/' className="navbar-item">blog</Link>
                 {/*<button style={{justifySelf: "end"}}>Subscribe!</button>*/}
+                {theme===0?<FaSun className="icon-sm" onClick={() => {toggleTheme(); setTheme(1)}} />:<TbMoonFilled className="icon-sm" onClick={() => {toggleTheme(); setTheme(0)}} />}
             </nav>
         </header>
     )

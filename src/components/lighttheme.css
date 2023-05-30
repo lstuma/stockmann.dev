@@ -1,0 +1,83 @@
+html {
+    background-color: #D9D9D9;
+    color: #1a1c1c;
+}
+body {
+    background-color: #D9D9D9;
+}
+a {
+    color: #1a1c1c;
+}
+hr {
+    border: #2DC5EF 0.3em solid;
+}
+/*
+// header
+*/
+header {
+    background-color: #F0F0F0;
+    border-bottom: 0.1em solid #D9D9D9;
+}
+.navbar-brand, .navbar-item {
+    color: #1a1c1c;
+}
+/*
+// cards
+*/
+.card { background-color: #2DC5EF; }
+.card-i1 { border: #F0F0F0 0.4em solid; }
+.card-2 { background-color: #AAAAAA; }
+.card-i2 { border: #AAAAAA 0.3em solid; }
+.card-i3 { border: #1a1c1c 0.3em solid; }
+.card-4 { background-color: #2DC5EF; }
+.card-5 { background-color: #F0F0F0; }
+.card-i5 { border: #706F6F 0.3em solid; }
+.card-3 {
+    background-color: #1a1c1c;
+    color: #121014;
+}.card-accent {
+    background-color: #97cb4d;
+    color: #121014;
+}
+/*
+// buttons
+*/
+button {
+    color: #1a1c1c;
+    background-color: #0099FF;
+    box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.2);
+}
+button:hover {
+    background-color: #007BFF;
+}
+button:active {
+    background-color: #0059FF;
+}
+.btn-b1 {
+    background-color: #F8F8F8;
+    box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.1);
+}
+.btn-b1:hover {
+    background-color: #F0F0F0;
+}
+.btn-b1:active {
+    background-color: #E9E9E9;
+}
+/*
+** icons
+*/
+.icon-sm { color: black; }
+/*
+** blog
+*/
+.article a:hover { color: #1452d9; }
+.article-banner {
+    background-color: #2DC5EF;
+}
+.article-card {
+    background-color: #2DC5EF;
+}
+/*
+// mobile was is curse for web development
+*/
+@media (max-width:1400px){}

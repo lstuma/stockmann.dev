@@ -19,7 +19,7 @@
         margin: 0;
     }
 
-    .card, .card-dark, .card-dark-inverted, .card-inverted, .card-white, .card-white-inverted, .card-primary, .card-primary-dark, .card-accent, .card-primary-dark-inverted {
+    .card, .card-2, .card-i2, .card-i1, .card-3, .card-i3, .card-4, .card-5, .card-accent, .card-i5 {
         padding: 0.8em 1.5em 1.5em;
         display: grid;
         max-width: 75vw !important;
