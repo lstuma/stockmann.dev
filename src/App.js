@@ -26,7 +26,7 @@ function updateTheme() {
 var themeStylesheets = []
 
 function App() {
-  const [cookies, setCookie, removeCookie] = useCookies(['theme']);
+  const [cookies, setCookie] = useCookies(['theme']);
   if('theme' in cookies) theme = cookies['theme']
   useEffect(() => {
     themeStylesheets.push(document.styleSheets[document.styleSheets.length-1])
