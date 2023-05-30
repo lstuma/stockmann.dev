@@ -268,6 +268,7 @@ button:active {
     font-variant: all-petite-caps;
     margin-top: .5em;
     align-self: center;
+    transition: 0.5s;
 }
 .article-card {
     padding: 2em 30em;
