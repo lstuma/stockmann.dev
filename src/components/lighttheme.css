@@ -2,9 +2,6 @@ html {
     background-color: #D9D9D9;
     color: #1a1c1c;
 }
-body {
-    background-color: #D9D9D9;
-}
 a {
     color: #1a1c1c;
 }
@@ -72,10 +69,14 @@ button:active {
 */
 .article a:hover { color: #1452d9; }
 .article-banner {
-    background-color: #2DC5EF;
+    background-color: #0099FF;
+}
+.article-heading {
+    color: #1a1c1c;
+    background-color: #0099FF;
 }
 .article-card {
-    background-color: #2DC5EF;
+    background-color: #E9E9E9;
 }
 /*
 // mobile was is curse for web development

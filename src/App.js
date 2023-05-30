@@ -14,7 +14,7 @@ import Article from './pages/Article'
 
 import './components/darktheme.css'
 import './components/lighttheme.css'
-var theme = 1
+var theme = 0
 
 function toggleTheme() {
   themeStylesheets.forEach((stylesheet) => stylesheet.disabled = true)

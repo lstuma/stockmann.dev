@@ -258,6 +258,7 @@ button:active {
     height: 20vw;
     background-color: #6614d9;
     display: grid;
+    justify-content: center;
 }
 .article-heading {
     font-size: 7vw;
@@ -265,8 +266,8 @@ button:active {
     overflow: hidden;
     font-family: Inter;
     font-variant: all-petite-caps;
-    justify-self: center;
-    margin-top: 4vw;
+    margin-top: .5em;
+    align-self: center;
 }
 .article-card {
     padding: 2em 30em;
