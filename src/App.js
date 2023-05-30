@@ -12,7 +12,7 @@ import Home from './pages/Home'
 import Blog from './pages/Blog'
 import Article from './pages/Article'
 
-
+import './global.css';
 import './components/darktheme.css'
 import './components/lighttheme.css'
 var theme = 1
