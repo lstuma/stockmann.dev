@@ -2,7 +2,7 @@ import "./about.css"
 
 const About = () => {
     return (
-    <>
+    <div id="about">
         <div className="container">
             <span className="heading">About Me</span>
             <p style={{wordBreak: "break-word", padding: "-0 3em", margin: "0"}}>
@@ -56,7 +56,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-    </>
+    </div>
     )
 }
 
