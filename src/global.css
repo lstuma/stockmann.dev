@@ -16,34 +16,34 @@ html {
     color: #f3f1f4;
     font-family: Monsterrat;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 body {
-    transition: 0.5s;
+    transition: 0.2s;
 }
 div {
-    transition: 0.5s;
+    transition: 0.2s;
 }
 a {
     color: #f3f1f4;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 p {
     font-size: 1.2em;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 img {
     max-width: 100%;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 hr {
     border: #251f28 0.3em solid;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 
@@ -71,7 +71,7 @@ header {
     padding: 0.5em 1em 1em;
     width: 100%;
     border-bottom: 0.1em solid #121014;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 header .icon-m {
     margin-right: 1.5vw;
@@ -125,7 +125,7 @@ footer {
     padding: 0.5em 1.5em;
     display: grid;
     border-radius: 0.5em;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .card { background-color: #251f28; }
 .card-i1 { border: #1c181f 0.4em solid; }
@@ -246,7 +246,7 @@ button:active {
 */
 .article {
     margin-top: 15vw;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .article p, .article code, .article li { font-size: 1.35em; }
 .article a { transition: 0.5s; }
@@ -259,7 +259,7 @@ button:active {
     background-color: #6614d9;
     display: grid;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .article-heading {
     font-size: 7vw;
@@ -269,7 +269,7 @@ button:active {
     font-variant: all-petite-caps;
     margin-top: .5em;
     align-self: center;
-    transition: 2.5s;
+    transition: 1s;
 }
 .article-card {
     padding: 2em 30em;
@@ -278,7 +278,7 @@ button:active {
 }
 .article-img {
     width: 100%;
-    transition: 0.5s;
+    transition: 0.2s;
 
 }
 
