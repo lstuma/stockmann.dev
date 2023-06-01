@@ -1,0 +1,25 @@
+.accomplishment-img {
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+#img-sdacathon { object-position: 0 -10em; }
+#img-ostalbhackathon { object-position: 0 -12em}
+
+/*
+// mobile was is curse for web development
+*/
+@media (max-width:1400px)
+{
+    .accomplishment-img {
+        width: 100%;
+        height: 40vw;
+    }
+    .container {
+        display: block;
+    }
+
+    #img-sdacathon { object-position: 0 -20vw; }
+    #img-ostalbhackathon { object-position: 0 -24vw}
+}

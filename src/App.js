@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 import Article from './pages/Article'
+import About from './pages/About'
 
 import './darktheme.css'
 import './lighttheme.css'
@@ -46,6 +47,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/blog/read/:article' element={<Article />}/>
+        </Routes>
+        <Routes>
+          <Route path='/about/' exact element={<About />}/>
         </Routes>
         <Footer />
       </div>

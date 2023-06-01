@@ -3,9 +3,9 @@ import { AiFillGithub, AiFillMail } from 'react-icons/ai'
 const Footer = () => {
     return (
         <footer>
-            <a href="mailto:g.lstuma@gmail.com" className="footer-item">
+            <a href="mailto:lstuma@proton.me" className="footer-item">
                 <AiFillMail className='icon-sm' />
-                g.lstuma@gmail.com
+                lstuma@proton.me
             </a>
             <a href="https://github.com/lstuma" className="footer-item">
                 <AiFillGithub className='icon-sm' />
