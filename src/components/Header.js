@@ -13,6 +13,7 @@ const Header = ({username, currentTheme, toggleTheme}) => {
                     <span className="navbar-brand">stockmann.dev</span>
                 </Link>
                 <Link to='/blog/' className="navbar-item">blog</Link>
+                <Link to='/about/' className="navbar-item">about me</Link>
                 {/*<button style={{justifySelf: "end"}}>Subscribe!</button>*/}
                 {theme===0?<FaSun className="icon-sm" onClick={() => {toggleTheme(); setTheme(1)}} />:<TbMoonFilled className="icon-sm" onClick={() => {toggleTheme(); setTheme(0)}} />}
             </nav>

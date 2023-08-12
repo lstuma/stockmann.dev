@@ -8,7 +8,7 @@ const About = () => {
             <p style={{wordBreak: "break-word", padding: "-0 3em", margin: "0"}}>
                 Hey there!
                 <br/><br/>
-                My name is Lukas Stockmann. I am a seventeen-year-old student currently navigating through eleventh grade at the Landesgymnasium für Hochbegabgte. I'm very passionate about coding, tinkering with AI and ML solutions, and delving into the world of ethical hacking and cybersecurity.
+                My name is Lukas Stockmann. I am a seventeen-year-old student currently navigating through twelfth grade at the Landesgymnasium für Hochbegabgte. I'm very passionate about coding, tinkering with AI and ML solutions, and delving into the world of ethical hacking and cybersecurity.
                 <br/><br/>
                 I am thrilled to share my blog with you and I hope you'll discover some articles that spark your interest and resonate with your passions! If you want to reach out to me feel free to send me an email under <a href="mailto:lstuma@proton.me" className="link">lstuma@proton.me</a>
             </p>
