@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Digitalt';
+    src: url("../../public/fonts/Digitalt.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("../../public/fonts/Inter.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Monsterrat';
+    src: url("../../public/fonts/Monsterrat.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Fira';
+    src: url("../../public/fonts/FiraCode-VF.ttf") format("truetype");
+}

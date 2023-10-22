@@ -1,0 +1,55 @@
+/*
+ * styling of header element in base template
+*/
+
+header {
+    align-content: center;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    
+    position: fixed;
+    z-index: 10;
+    height: 3em;
+    top: 0;
+    left: 0;
+    padding: 0.5em 1em 1em;
+    width: 100%;
+    
+    border-bottom: white 1px solid;
+    background-color: #000000;
+    transition: 0.2s;
+}
+header .icon {
+    height: 2.5em;
+    margin-right: 1.5vw;
+}
+/* on mobile: remove icon */ 
+@media (max-width:370px) {
+    header .icon {
+        display: none;
+    }
+}
+
+header .logo {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+header > a {
+    position: relative;
+    transform: translateY(0.3em);
+}
+header > div {
+    position: relative;
+    transform: translateY(0.8em);
+    display: inline;
+}
+header .logo, header .item {
+    font-style: normal;
+    margin-right: 1.5vw;
+}
+
+header .logo:hover, header .item:hover {
+    color: white;
+}

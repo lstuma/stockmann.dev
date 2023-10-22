@@ -5,8 +5,8 @@ html.light {
 .light a {
     color: #1a1c1c;
 }
-.light hr {
-    border: #2DC5EF 0.3em solid;
+.light a:hover {
+    color: #007BFF;
 }
 /*
 // header
@@ -15,70 +15,38 @@ html.light {
     background-color: #F0F0F0;
     border-bottom: 0.1em solid #D9D9D9;
 }
-.light .navbar-brand, .light .navbar-item {
-    color: #1a1c1c;
+.light header .logo:hover, .light header .item:hover {
+    color: black;
 }
 /*
-// cards
+// about page
 */
-.light .card { background-color: #2DC5EF; }
-.light .card-i1 { border: #F0F0F0 0.4em solid; }
-.light .card-2 { background-color: #AAAAAA; }
-.light .card-i2 { border: #AAAAAA 0.3em solid; }
-.light .card-i3 { border: #1a1c1c 0.3em solid; }
-.light .card-4 { background-color: #2DC5EF; }
-.light .card-5 { background-color: #F0F0F0; }
-.light .card-i5 { border: #706F6F 0.3em solid; }
-.light .card-3 {
-    background-color: #1a1c1c;
-    color: #121014;
-}
-.light .card-accent {
-    background-color: #97cb4d;
-    color: #121014;
+.light #projects > .item {
+    border-color: black;
 }
 /*
 // buttons
 */
 .light button {
-    color: #1a1c1c;
-    background-color: #0099FF;
-    box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.2);
+    color: black;
+    border: black 1px solid;
+    outline: black 1px solid;
+    background-color: #00000000;
 }
 .light button:hover {
-    background-color: #007BFF;
+    border: #0099FF 1px solid;
+    outline: #0099FF 1px solid;
+    background-color: #0099FF;
 }
 .light button:active {
     background-color: #0059FF;
 }
-.light .btn-b1 {
-    background-color: #F8F8F8;
-    box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.1);
-}
-.light .btn-b1:hover {
-    background-color: #F0F0F0;
-}
-.light .btn-b1:active {
-    background-color: #E9E9E9;
-}
 /*
 ** icons
 */
-.light .icon-sm { color: black; }
 /*
 ** blog
 */
-.light .article a:hover { color: #1452d9; }
-.light .article-banner {
-    background-color: #0099FF;
+.light code {
+    background-color: #eee;
 }
-.light .article-heading {
-    color: #1a1c1c;
-}
-.light .article-card {
-    background-color: #E9E9E9;
-}
-/*
-// mobile was is curse for web development
-*/
-@media (max-width:1400px){}

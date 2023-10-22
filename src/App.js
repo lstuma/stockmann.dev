@@ -5,15 +5,25 @@ import Cookies from 'universal-cookie'
 // components
 import Header from './components/Header'
 import Footer from './components/Footer'
+import LoremIpsumText from './components/loremipsum/LoremIpsumText'
 
 // pages
-import Home from './pages/Home'
-import Blog from './pages/Blog'
-import Article from './pages/Article'
-import About from './pages/About'
+import Home from './pages/home/Home'
+import Blog from './pages/blog/Blog'
+import Article from './pages/article/Article'
+import About from './pages/about/About'
 
-import './darktheme.css'
 import './lighttheme.css'
+import './css/alt.css'
+
+
+import './css/base.css'
+import './css/standard.css'
+import './css/buttons.css'
+import './css/fonts.css'
+import './css/borders.css'
+import './css/icons.css'
+import './css/loading.css'
 var theme = 1
 
 

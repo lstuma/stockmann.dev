@@ -1,0 +1,44 @@
+#terminal-window {
+    margin-top: 5em;
+    background-color: #101010;
+    padding: 1em 1em;
+    border-radius: .3em;
+    height: 26.5em;
+}
+
+.terminal-code {
+    color: white;
+    font-family: Fira;
+    margin: .2em;
+}
+
+#content > p {
+    margin: .3em 0;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#projects > .item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 23vw;
+    border: 1px white dashed;
+}
+
+#projects > .item > img {
+    width: 10vw;
+}
+
+#projects > .item > div {
+    transform: translateX(1em);
+}
+
+#projects > .item .emoji {
+    font-size: 5em;
+    position: relative;
+    left: calc(50% - 1em);
+}

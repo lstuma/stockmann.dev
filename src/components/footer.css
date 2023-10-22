@@ -1,0 +1,32 @@
+/*
+ * styling of footer element in base template
+*/
+
+footer {
+    display: block;
+    justify-self: center;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    
+    margin-bottom: 1em;
+    margin-top: 2.5em;
+    
+    position: relative;
+    height: 2.5em;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+footer > .item {
+    color: white;
+    font-size: 1em;
+}
+
+/* on mobile: stack links over another */
+@media (max-width:730px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

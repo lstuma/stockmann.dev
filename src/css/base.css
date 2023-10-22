@@ -1,0 +1,16 @@
+/*
+ * styling for elements in base template
+*/
+
+html {
+    font-family: Monsterrat;
+    overflow-x: hidden;
+    color: white;
+    background-color: black;
+}
+
+#content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 3em;
+}

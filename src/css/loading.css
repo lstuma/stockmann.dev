@@ -1,0 +1,56 @@
+/*
+ * styling indicating that media is loading
+*/
+
+.loading-text {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1em;
+    color: #00000000;
+    
+    animation-name: anim-loading-text;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.loading-img {
+    
+}
+
+.loading-button {
+    border: #000 0px;
+    
+    animation-name: anim-loading-button;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.loading-button:hover {
+    border: #000 0px;
+    color: white;
+    cursor: wait;
+}
+
+@keyframes anim-loading-text {
+    0% {
+        text-decoration-color: #ffffff10;
+    }
+    50% {
+        text-decoration-color: #ffffff20;
+    }
+    100% {
+        text-decoration-color: #ffffff10;
+    }
+}
+
+@keyframes anim-loading-button {
+    0% {
+        background-color: #ffffff10;
+    }
+    50% {
+        background-color: #ffffff20;
+    }
+    100% {
+        background-color: #ffffff10;
+    }
+}

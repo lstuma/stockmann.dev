@@ -1,0 +1,24 @@
+/*
+ * classes for styling icons (from react-icons package)
+*/
+
+.icon-sm {
+    height: 1em;
+    with: auto;
+    transform: translateY(0.15em);
+    margin: 0 0.2em;
+}
+
+
+.icon-m {
+    height: 2em;
+    with: auto;
+    transform: translateY(0.55em);
+    margin: 0 0.5em;
+}
+.icon-l {
+    height: 5em;
+    with: auto;
+    transform: translateY(0.15em);
+    margin: 0 0.2em;
+}

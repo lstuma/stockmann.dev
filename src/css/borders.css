@@ -1,0 +1,20 @@
+/*
+ * classes for styling borders
+*/
+
+
+.border-0 {
+    border: 0;
+}
+.border-bottom {
+    border-bottom: white 1px solid;
+}
+.border-top {
+    border-top: white 1px solid;
+}
+.border-right {
+    border-right: white 1px solid;
+}
+.border-left {
+    border-left: white 1px solid;
+}

@@ -1,0 +1,28 @@
+/*
+ * styling of standard css elements
+*/
+
+a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.4s;
+}
+a:hover {
+    color: red;
+}
+
+p {
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+
+img {
+    transition: 0.2s;
+}
+
+hr {
+    border: white 0.3em solid;
+    transition: 0.2s;
+}

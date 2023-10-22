@@ -1,0 +1,10 @@
+.featured-article {
+    max-width: 50vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5em;
+}
+.featured-article h2 {
+    font-family: Fira;
+}

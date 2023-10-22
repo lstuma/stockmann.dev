@@ -1,0 +1,17 @@
+/*
+ * styling for all kinds of funky buttons
+*/
+
+button {
+    background-color: #00000000;
+    color: white;
+    border: white 1px solid;
+    padding: 0.5em 1em;
+    transition: 0.3s;
+}
+button:hover {
+    color: black;
+    background-color: red;
+    border: 1px red solid;
+    cursor: pointer;
+}
