@@ -29,7 +29,7 @@ const Article = () => {
             {state.title?
                 <>
                     <h1 className="heading">{state.title}</h1>
-                    <form name="fire" action="/blog/fire" method="POST" netlify data-netlify="true">
+                    <form name="fire" method="POST" netlify data-netlify="true">
                         <button type="submit" name="fire" value={"1-"+article} id="fire-button"><IoMdRocket className="icon"/></button>
                     </form>
                     <div className="container article">
