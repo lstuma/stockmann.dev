@@ -19,7 +19,7 @@ const Article = () => {
     if(!SentRequest) {
         updateSentRequest(true)
         setTimeout(() => {
-            fetchPost(process.env.PUBLIC_URL+"/blog/articles/"+article+".md").then(data => setState({markdown: data.markdown, title: data.title}))
+            fetchPost(process.env.PUBLIC_URL+"/blog/articles/"+article+".md").then(data => { if(data.title==="404") return; setState({markdown: data.markdown, title: data.title})})
             }, 500);
     }
     
@@ -41,8 +41,8 @@ const Article = () => {
                         <div className="article" >
                             {(Array.from({length: random.int(3,6)},(_,i) =>
                                 <>
-                                <h2 className="loading-text">{LoremIpsumText(random.int(20, 40))}</h2>
-                                <p className="loading-text">{LoremIpsumText(random.int(100, 800))}</p>
+                                    <h2 className="loading-text" key={i*2}>{LoremIpsumText(random.int(20, 40))}</h2>
+                                    <p className="loading-text" key={i*2+1}>{LoremIpsumText(random.int(100, 800))}</p>
                                 </>
                             ))}
                         </div>
