@@ -40,7 +40,8 @@ export const TerminalLoading = ({lines}) => {
     
     useEffect(() => {
         moveCursor(char, line);
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     
     return (
         <div id="terminal-window">
