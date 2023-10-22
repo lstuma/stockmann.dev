@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom'
-import { BiLinkExternal } from 'react-icons/bi'
-import { useState } from 'react'
 import './home.css';
 
 import BlogPreview from '../../api/blog/BlogPreview'

@@ -12,21 +12,21 @@ const About = () => {
         <h2>Some of my projects</h2>
         <div id="projects">
             <div className="item">
-                <img src={process.env.PUBLIC_URL+"/img/about/hackaburg_2023.jpg"}></img>
+                <img alt="404" src={process.env.PUBLIC_URL+"/img/about/hackaburg_2023.jpg"}></img>
                 <div>
                     <h3>Hackaburg 2023</h3>
                     <span className="emoji">🏰</span>
                 </div>
             </div>
             <div className="item">
-                <img src={process.env.PUBLIC_URL+"/img/about/sdacathon.jpg"}></img>
+                <img alt="404" src={process.env.PUBLIC_URL+"/img/about/sdacathon.jpg"}></img>
                 <div>
                     <h3>SDaCathon 2022</h3>
                     <span className="emoji">🏗️</span>
                 </div>
             </div>
             <div className="item">
-                <img src={process.env.PUBLIC_URL+"/img/about/ostalbhackathon.jpg"}></img>
+                <img alt="404" src={process.env.PUBLIC_URL+"/img/about/ostalbhackathon.jpg"}></img>
                 <div>
                     <h3>Ostalb Hackathon 2022</h3>
                     <span className="emoji">🚀</span>

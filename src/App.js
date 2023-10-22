@@ -5,7 +5,6 @@ import Cookies from 'universal-cookie'
 // components
 import Header from './components/Header'
 import Footer from './components/Footer'
-import LoremIpsumText from './components/loremipsum/LoremIpsumText'
 
 // pages
 import Home from './pages/home/Home'

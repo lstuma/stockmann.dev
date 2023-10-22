@@ -5,9 +5,9 @@ const getPrefix = (prefixChar) => {
         case '$': return <span style={{color: "red"}}>lstuma@kali:~$</span>
         case '+': return <><span style={{color: "#555"}}>[</span><span style={{color: "green"}}>+</span><span style={{color: "#555"}}>] </span></>
         case '-': return <><span style={{color: "#555"}}>[</span><span style={{color: "red"}}>-</span><span style={{color: "#555"}}>] </span></>
-    
-    return <></>
+        default: break;
     }
+    return <></>
 }
 
 export const TerminalLoading = ({lines}) => {
@@ -20,11 +20,11 @@ export const TerminalLoading = ({lines}) => {
             _char = 0
             setChar(_char)
             let timeout = 500;
-            if(lines[_line][_char] == 'W')  {
+            if(lines[_line][_char] === 'W')  {
                 timeout = 2000;
                 _line += 1
             }
-            else if(lines[_line][_char] == 'S') {
+            else if(lines[_line][_char] === 'S') {
                 timeout = 100;
                 _line += 1;
             }
@@ -40,7 +40,7 @@ export const TerminalLoading = ({lines}) => {
     
     useEffect(() => {
         moveCursor(char, line);
-    }, [])
+    })
     
     return (
         <div id="terminal-window">
