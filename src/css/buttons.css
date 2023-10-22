@@ -3,15 +3,39 @@
 */
 
 button {
-    background-color: #00000000;
     color: white;
-    border: white 1px solid;
+    background-color: #0000;
+    border: 1px white solid;
     padding: 0.5em 1em;
     transition: 0.3s;
+    position: relative;
 }
 button:hover {
     color: black;
     background-color: red;
     border: 1px red solid;
     cursor: pointer;
+}
+
+
+button::after {
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+
+    background-color: none;
+
+    transition: 0.2s;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button:hover::after {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background-color: red;
 }

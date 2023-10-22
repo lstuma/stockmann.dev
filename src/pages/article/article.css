@@ -14,3 +14,25 @@ code {
     border-radius: .3em;
     padding: 0 .3em;
 }
+
+#fire-button {
+    position: absolute;
+    top: 10em;
+    margin-left: calc(2vw + 2em);
+}
+#fire-button {
+    background-color: #0000;
+
+}
+#fire-button > .icon {
+    font-size: 2em;
+}
+#fire-button:hover {
+    color: orange;
+}
+#fire-button:active {
+    color: red;
+}
+#fire-button::after {
+    display: none;
+}
