@@ -3,7 +3,7 @@ export const fetchPost = async (link) => {
     let lines = text.split('\n')
     text = text.slice(text.indexOf('\n', 2))
 
-    if(lines[0].startsWith('<!DOCTYPE html>')) { console.error("could not load resource"); return {title: "404", markdown: "404"}; }
+    if(lines[0].startsWith('<!DOCTYPE html>') || lines[0].startsWith('<!doctype html>')) { console.error("could not load resource"); return {title: "404", markdown: "404"}; }
 
     return {title: lines[0], markdown: text}
 }
