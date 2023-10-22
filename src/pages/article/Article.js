@@ -29,10 +29,7 @@ const Article = () => {
             {state.title?
                 <>
                     <h1 className="heading">{state.title}</h1>
-                    <form name="fire" action="/blog/fire" method="POST" netlify data-netlify="true">
-                        <input type="hidden" name="form-name" value="fire"/>
-                        <button type="submit" name="fire-btn" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
-                    </form>
+                    <button onClick="submit" name="fire-btn" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
                     <div className="container article">
                         <div className="article" >
                             <ReactMarkdown children={state.markdown} remarkPlugins={[remarkGfm]} />
