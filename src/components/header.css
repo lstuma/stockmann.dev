@@ -24,12 +24,6 @@ header .icon {
     height: 2.5em;
     margin-right: 1.5vw;
 }
-/* on mobile: remove icon */ 
-@media (max-width:370px) {
-    header .icon {
-        display: none;
-    }
-}
 
 header .logo {
     font-family: Inter;
@@ -52,4 +46,15 @@ header .logo, header .item {
 
 header .logo:hover, header .item:hover {
     color: white;
+}
+
+/* on mobile: remove icon */
+@media (max-width:370px) {
+    header .icon {
+        display: none;
+    }
+    header > div {
+        transform: translateY(.2em);
+    }
+
 }

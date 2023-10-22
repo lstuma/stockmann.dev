@@ -8,3 +8,10 @@
 .featured-article h2 {
     font-family: Fira;
 }
+
+/* on mobile: less preview padding */
+@media (max-width:1000px) {
+    .featured-article {
+        max-width: 90vw;
+    }
+}

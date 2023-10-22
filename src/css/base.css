@@ -14,3 +14,11 @@ html {
     padding-right: 10vw;
     padding-top: 3em;
 }
+
+/* on mobile: no content padding */
+@media (max-width:1000px) {
+    #content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
