@@ -23,6 +23,7 @@ import './css/fonts.css'
 import './css/borders.css'
 import './css/icons.css'
 import './css/loading.css'
+import './css/mobile.css'
 var theme = 1
 
 

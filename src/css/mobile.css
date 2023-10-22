@@ -1,0 +1,24 @@
+/*
+ * classes for enabling and disabling elements depending on aspect ratio
+*/
+
+@media (max-aspect-ratio: 5/8) {
+    .min-aspect-5x8 {display: none !important;}
+}
+@media (min-aspect-ratio: 5/8) {
+    .max-aspect-5x8 {display: none !important;}
+}
+
+@media (max-width: 400px) {
+    .min-width-400 {display: none !important;}
+}
+@media (min-width: 400px) {
+    .max-width-400 {display: none !important;}
+}
+
+@media (max-width: 1800px) {
+    .min-width-1800 {display: none !important;}
+}
+@media (min-width: 1800px) {
+    .max-width-1800 {display: none !important;}
+}

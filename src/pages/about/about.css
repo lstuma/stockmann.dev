@@ -3,7 +3,7 @@
     background-color: #101010;
     padding: 1em 1em;
     border-radius: .3em;
-    height: 26.5em;
+    height: cal(26.5vh - 26.5vw);
 }
 
 .terminal-code {
@@ -26,11 +26,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 23vw;
+    height: 11em;
     border: 1px white dashed;
 }
 
 #projects > .item > img {
-    width: 10vw;
+    width: 11em;
 }
 
 #projects > .item > div {
@@ -41,4 +42,38 @@
     font-size: 5em;
     position: relative;
     left: calc(50% - 1em);
+}
+
+/* on mobile: change layout */
+@media (max-width:370px) {
+    header .icon {
+        display: none;
+    }
+    header > div {
+        transform: translateY(.2em);
+    }
+
+}
+
+
+@media (max-width: 1800px) {
+    .no-mobile {display: none !important;}
+
+    /*
+     * on mobile: change layout to bullets
+    */
+    #projects {
+        display: block;
+    }
+    #projects > .item {
+        height: 3em;
+        border: none;
+        width: 100%;
+    }
+    #projects > .item > li {
+        margin-bottom: .7em;
+    }
+}
+@media (min-width: 1800px) {
+    .mobile {display: none !important;}
 }

@@ -11,27 +11,32 @@ const About = () => {
         <p>I love meeting up with other's who share the same fascination for the world of tech and I really enjoy working on projects together with friends.</p>
         <h2>Some of my projects</h2>
         <div id="projects">
-            <div className="item">
+            <div className="item no-mobile">
                 <img alt="404" src={process.env.PUBLIC_URL+"/img/about/hackaburg_2023.jpg"}></img>
                 <div>
                     <h3>Hackaburg 2023</h3>
                     <span className="emoji">🏰</span>
                 </div>
             </div>
-            <div className="item">
+            <div className="item no-mobile">
                 <img alt="404" src={process.env.PUBLIC_URL+"/img/about/sdacathon.jpg"}></img>
                 <div>
                     <h3>SDaCathon 2022</h3>
                     <span className="emoji">🏗️</span>
                 </div>
             </div>
-            <div className="item">
+            <div className="item no-mobile">
                 <img alt="404" src={process.env.PUBLIC_URL+"/img/about/ostalbhackathon.jpg"}></img>
                 <div>
                     <h3>Ostalb Hackathon 2022</h3>
                     <span className="emoji">🚀</span>
                 </div>
             </div>
+            <ul className="item mobile">
+                <li>Hackaburg 2023</li><br/>
+                <li>SDaCathon 2022</li><br/>
+                <li>Ostalb Hackathon 2022</li>
+            </ul>
         </div>
         <TerminalLoading lines={
         ["$ whoami",
