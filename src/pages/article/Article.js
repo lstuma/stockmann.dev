@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AiFillFire } from 'react-icons/ai'
+import { IoMdRocket } from 'react-icons/io'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
@@ -29,8 +29,8 @@ const Article = () => {
             {state.title?
                 <>
                     <h1 className="heading">{state.title}</h1>
-                    <form action={"./"+article} method="POST" netlify>
-                        <button type="submit" name="fire" value="1" id="fire-button"><AiFillFire className="icon"/></button>
+                    <form action={"./"+article} method="POST" netlify data-netlify="true">
+                        <button type="submit" name="fire" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
                     </form>
                     <div className="container article">
                         <div className="article" >
