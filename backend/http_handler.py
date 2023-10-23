@@ -9,13 +9,14 @@ def handle_request(connection, client_address):
 
     try:
         request = str(connection.recv(4096), 'utf-8')
-        log(2, f'received request')
+        log(3, f'received request')
 
         json_request = JSONRequest.from_str(request)
+        log(3, f'request: {json_request.path}')
         log(6, f'JSONRequest:\n{json_request}')
        
         if '*' in http_settings.allowed_hosts or json_request.headers['Host'] in http_settings.allowed_hosts:
-            log(2, 'valid host header')
+            log(3, 'valid host header')
         else:
             log(3, 'invalid host header')
 
@@ -30,5 +31,5 @@ def handle_request(connection, client_address):
             log(5, f'could not find matching path for {json_request.path}')
 
     except Exception as ex:
-        log(0, f'a fatal error occured: \033[;31m{ex}\033[0;0m\n' + ''.join(traceback.format_tb(ex.__traceback__)))
+        log(0, f'an error occured: \033[;31m{ex}\033[0;0m\n' + ''.join(traceback.format_tb(ex.__traceback__)))
         log(3, 'error not critical - continueing')
