@@ -64,16 +64,23 @@ class JSONRequest:
 
 
 class JSONResponse:
-    def __init__(self, body, headers=''):
+    def __init__(self, body, headers={}, status='200 OK'):
+        self.preamble = 'HTTP/1.0 '
+        self.status = status
         if headers:
-            self.headers = '\r\n'.join(headers) + '\r\n'
+            self.headers = headers
         else:
-            self.headers = 'HTTP/1.0 200 OK\r\n' + 'Content-Type: application/json\r\n'
-        self.body = json.dumps(body).replace('\n', '\n\r')
+            self.headers = 'Content-Type: application/json\r\n'
+        self.body = body
 
     def render(self):
-        body = self.body
-        headers = (self.headers + f'Content-Length: {len(body)}' + '\r\n')
+        # render body to string
+        render_body = json.dumps(self.body).replace('\n', '\n\r')
+        # render headers to string
+        render_headers = ''
+        self.headers['Content-Length'] = str(len(body))
+        for name, value in self.headers.items():
+            render_headers += name+': '+value+'\r\n'
         return (headers + '\r\n\r\n' + body).encode('utf-8')
 
     def __str__(self):

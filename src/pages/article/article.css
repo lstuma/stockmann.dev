@@ -15,7 +15,7 @@ code {
     padding: 0 .3em;
 }
 
-#fire-button {
+#fire-button #fire-counter{
     position: absolute;
     top: 10em;
     margin-left: calc(2vw + 2em);

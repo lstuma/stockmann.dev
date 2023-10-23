@@ -8,6 +8,7 @@ import random from 'random'
 import './article.css';
 
 import { LoremIpsumText } from '../../components/loremipsum/LoremIpsumText'
+import FireCounter from '../../api/blog/FireCounter'
 import { fetchPost } from '../../api/blog/fetchPost'
 
 const Article = () => {
@@ -29,7 +30,8 @@ const Article = () => {
             {state.title?
                 <>
                     <h1 className="heading">{state.title}</h1>
-                    <button onClick="submit" name="fire-btn" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
+                    <button onClick="" name="fire-btn" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
+                    <FireCounter article_id={article} id="fire-counter" />
                     <div className="container article">
                         <div className="article" >
                             <ReactMarkdown children={state.markdown} remarkPlugins={[remarkGfm]} />
