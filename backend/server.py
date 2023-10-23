@@ -60,5 +60,5 @@ if __name__ == '__main__':
         finally:
             pass
         sock.close()
-        log(0, f'an fatal error occured: \033[;31m{e}\033[0;0m\n' + ''.join(traceback.format_tb(e.__traceback__)))
+        log(0, f'a fatal error occured: \033[;31m{e}\033[0;0m\n' + ''.join(traceback.format_tb(e.__traceback__)))
     
