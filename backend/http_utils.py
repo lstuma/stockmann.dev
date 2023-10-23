@@ -5,9 +5,9 @@ class JSONRequest:
     def __init__(self, method, path, headers, body, get=''):
         self.method = method
         self.path = path
-        self.headers = headers
         self._post = body
         self._get = get
+        self.HEADERS = headers
         self.GET, self.POST = {}, {}
         self.gen_method_array()
 
@@ -17,7 +17,11 @@ class JSONRequest:
         # http request headers
         lines = str.replace('\r', '').split('\n')[1:]
         split_line = lines.index('')
-        headers = {header[0]: header[1].strip() for header in [_header.split(':') for _header in lines[:split_line]]}
+        _headers = lines[:split_line]
+        headers = {}
+        for header in _headers:
+            colon_i = header.index(':')
+            headers[header[0:colon_i].strip()] = header[colon_i+1:].strip()
 
         # parse headers
         if str.startswith('GET'):
@@ -56,33 +60,46 @@ class JSONRequest:
         else:
             return None
 
+    def headers(self, key):
+        if key in self.HEADERS:
+            return self.HEADERS[key]
+        else:
+            return None
+
     def __str__(self):
         return f'{self.method} {self.path}?{self._get} HTTP/1.0\n' + \
-            f'{self.headers}\n' + \
+            f'{self.HEADERS}\n' + \
             f'{self.POST}\n' + \
             f'{self.GET}'
 
 
 class JSONResponse:
     def __init__(self, body, headers={}, status='200 OK'):
+        # preamble
         self.preamble = 'HTTP/1.0 '
         self.status = status
-        if headers:
-            self.headers = headers
-        else:
-            self.headers = 'Content-Type: application/json\r\n'
+        # standard headers
+        self.headers = {}
+        self.headers['Content-Type'] = 'application/json'
+        # custom headers
+        self.set_headers(headers)
+        # body
         self.body = body
+
+    def set_headers(self, headers):
+        # set a dictionary of headers
+        for k, v in headers.items():
+            self.headers[k] = v
 
     def render(self):
         # render body to string
         render_body = json.dumps(self.body).replace('\n', '\n\r')
         # render headers to string
         render_headers = ''
-        self.headers['Content-Length'] = str(len(body))
-        for name, value in self.headers.items():
-            render_headers += name+': '+value+'\r\n'
-        return (headers + '\r\n\r\n' + body).encode('utf-8')
+        self.headers['Content-Length'] = str(len(self.body))
+        for k, v in self.headers.items():
+            render_headers += k+': '+v+'\r\n'
+        return (self.preamble + self.status + '\r\n' + render_headers + '\r\n\r\n' + render_body).encode('utf-8')
 
     def __str__(self):
-        return self.headers.replace('\r', '\\r') + f'Content-Length: {len(self.body)}' + '\\r\n\\r\n\\r\n' + \
-            self.body.replace('\r', '\\r')
+        return self.render().replace('\r', '\\r')
