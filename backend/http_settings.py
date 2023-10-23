@@ -14,7 +14,7 @@ logging_level = 4
 allowed_hosts = ['127.0.0.1', 'api.stockmann.dev']
 
 # CORS
-allowed_origins = ['http://api.stockmann.dev', 'http://stockmann.dev', 'http://127.0.0.1:3000']
+allowed_origins = ['http://api.stockmann.dev', 'http://stockmann.dev', 'https://stockmann.dev', 'http://127.0.0.1:3000']
 allow_credentials = 'false'
 
 # ADRESS tuple of (<address>,<port>)
