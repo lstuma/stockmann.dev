@@ -29,4 +29,4 @@ def vote_fire(request: JSONRequest):
     except Exception: return JSONResponse(body={'reason': 'type conversion failed'}, status=400)
     # get fires
     fires = fire.votefire(article_id)
-    return JSONResponse(body={}, status=200)
+    return JSONResponse(body={'status':'successful'}, status=200)
