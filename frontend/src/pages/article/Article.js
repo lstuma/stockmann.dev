@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { IoMdRocket } from 'react-icons/io'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
@@ -30,8 +29,7 @@ const Article = () => {
             {state.title?
                 <>
                     <h1 className="heading">{state.title}</h1>
-                    <button onClick="" name="fire-btn" value="1" id="fire-button"><IoMdRocket className="icon"/></button>
-                    <FireCounter article_id={article} id="fire-counter" />
+                    <FireCounter article_id={article} />
                     <div className="container article">
                         <div className="article" >
                             <ReactMarkdown children={state.markdown} remarkPlugins={[remarkGfm]} />

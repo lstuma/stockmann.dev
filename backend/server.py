@@ -5,15 +5,14 @@ import http_settings
 import traceback
 
 #
-# CONFIGURATION:
+# settings:
 #
 
 allowed_hosts = http_settings.allowed_hosts
-
-# ========================== END
-
 address = http_settings.address
 handle_connection = http_handler.handle_request
+
+# ========================== END
 
 
 def run_server():

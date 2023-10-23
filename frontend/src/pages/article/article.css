@@ -1,0 +1,16 @@
+.article {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    line-height: 1.7em;
+}
+
+.article img {
+    max-width: 100%;
+}
+
+code {
+    font-family: Fira;
+    background-color: #222;
+    border-radius: .3em;
+    padding: 0 .3em;
+}

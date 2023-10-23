@@ -1,0 +1,65 @@
+.fire-counter {
+    position: absolute;
+    top: 7em;
+    margin-left: calc(2vw);
+    display: grid;
+    grid-template-columns: 5em 1fr;
+}
+.fire-counter > button {
+    background-color: #0000;
+    border: 0;
+    padding: 0;
+}
+.fire-counter > button > .icon {
+    font-size: 5em;
+}
+.fire-counter > button > .icon.background {
+    color: #fff5;
+    z-index: -1;
+}
+.fire-counter > button:hover {
+    background-color: #0000;
+    border: 0;
+    color: orange;
+}
+.fire-counter > button:active {
+    background-color: #0000;
+    border: 0;
+    color: orange;
+}
+.fire-counter > button::after {
+    display: none;
+}
+
+.fire-counter > .rocket-fly {
+    color: orange;
+    z-index: -1;
+    animation: anim-rocket-shake .1s linear 48, anim-rocket-fly 6s ease-in 1;
+}
+
+@keyframes anim-rocket-shake {
+    0% { transform: translateX(.1em) }
+    50% { transform: translateX(-.1em) }
+    100% { transform: translateX(-.1em) }
+}
+@keyframes anim-rocket-fly {
+    0% {
+        bottom: 0;
+        color: orange;
+    }
+    40% { bottom: 0; }
+    80% {
+        bottom: calc(5vh + 10em);
+        color: orange;
+    }
+    80.01% {
+        bottom: 0;
+        color: #ff00;
+    }
+    90% {
+        color: #ff0f;
+    }
+    100% {
+        color: orange;
+    }
+}
