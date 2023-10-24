@@ -54,8 +54,7 @@ contains constans (`STATUS`)
 <br />
 
 #####  JSONRequest.post(self, key):
-`key`: post parameter name \s
-
+`key`: post parameter name <br/>
 **returns**: returns value of post parameter if any, otherwise None
 
 <br />
