@@ -5,5 +5,5 @@ export const fetchFirestat = async (id) => {
     return data.fire
 }
 export const fetchVotefire = async (id) => {
-    let json = await fetch('https://api.stockmann.dev/vote_fire?id='+id).then(data => data.text())
+    await fetch('https://api.stockmann.dev/vote_fire?id='+id).then(data => data.text())
 }
