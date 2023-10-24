@@ -46,5 +46,5 @@ def handle_request(connection, client_address):
 
     except Exception as ex:
         # log error and continue
-        log(0, f'an error occured: \033[;31m{ex}\033[0;0m\n' + ''.join(traceback.format_tb(ex.__traceback__)))
-        log(3, 'error not critical - continueing')
+        log(0, f'error occured: \033[;31m{ex}\033[0;0m\n' + ''.join(traceback.format_tb(ex.__traceback__)))
+        log(1, 'error not critical - continueing')
