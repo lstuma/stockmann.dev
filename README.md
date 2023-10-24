@@ -28,7 +28,7 @@ Visit site at [stockmann.dev](https://stockmann.dev)
 
 **class `http_utils.JSONRequest`**
 
-func `JSONRequest.__init__(self, method, path, headers, body, get='')`:
+`JSONRequest.__init__(self, method, path, headers, body, get='')`:
  - `str: method`: request method (`GET`|`POST`)
  - `str path`: requested path (e.g. `/api/test1`)
  - `dict headers`: headers of request
@@ -36,43 +36,43 @@ func `JSONRequest.__init__(self, method, path, headers, body, get='')`:
  - `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
  - *returns*: a JSONRequest object
 
-func `@classmethod` `JSONRequest.from_str(cls, str)`:
+`@classmethod` `JSONRequest.from_str(cls, str)`:
  - `str: str`: the entire http request as a string
  - *returns*: a JSONRequest object
 
-func `JSONRequest.get(self, key)`:
+`JSONRequest.get(self, key)`:
  - `key`: get parameter name
  - *returns*: returns value of get parameter if any, otherwise None
 
-func `JSONRequest.post(self, key)`:
+`JSONRequest.post(self, key)`:
  - `key`: post parameter name
  - *returns*: returns value of post parameter if any, otherwise None
 
-func `JSONRequest.headers(self, key)`:
+`JSONRequest.headers(self, key)`:
  - `key`: header name
  - *returns*: returns value of header if any, otherwise None
 
 **class `http_utils.JSONResponse`**
 
-func `JSONResponse.__init__(self, body, headers={}, status=200)`:
+`JSONResponse.__init__(self, body, headers={}, status=200)`:
  - `body`: response body
  - `dict: headers`: response headers
  - `int: status`: response status code
  - *returns*: a JSONResponse object
 
-func `JSONResponse.set_headers(self, headers)`:
+`JSONResponse.set_headers(self, headers)`:
  - `dict: headers`: headers to overwrite
  - Overwrites any headers mentioned `headers`
  - *returns*: void
 
-func `JSONResponse.render(self)`:
+`JSONResponse.render(self)`:
  - Renders the request into a valid string that can be sent to client
  - *returns*: rendered request
 
 #### logger
  - used to print log messages to stdout
 
-func `logger.log(level, msg, pre='', end='\n')`:
+`logger.log(level, msg, pre='', end='\n')`:
  - `int: level`: verbosity level, needs to be in range of 0-6
  - `str: msg`: message to log
  - `str: pre`: prefix before verbosity indicator
