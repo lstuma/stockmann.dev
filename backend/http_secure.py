@@ -5,7 +5,7 @@ import ssl
 # create log
 log = logger.create_log(name='HTTPSECURE', color='bpink')
 
-def make_secure(sock, hostname, cert_path, privatekey_path, password=None):
+def make_secure(sock, cert_path, privatekey_path, password=None):
     # privkey password-policy
     if not password: password = ask_password
 
