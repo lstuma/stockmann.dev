@@ -15,7 +15,6 @@ USE_HTTPS = True
 CERT_PATH = '/etc/letsencrypt/live/api.stockmann.dev/fullchain.pem'
 PRIVKEY_PATH = '/etc/letsencrypt/live/api.stockmann.dev/privkey.pem'
 PRIVKEY_DECRYPT_PASSWD = ''
-HTTPS_HOSTNAME = 'api.stockmann.dev'
 
 # ALLOWED_HOSTS
 ALLOWED_HOSTS = ['127.0.0.1', 'api.stockmann.dev']
