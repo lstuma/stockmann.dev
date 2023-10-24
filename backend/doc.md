@@ -55,6 +55,7 @@ contains constans (`STATUS`)
 
 #####  JSONRequest.post(self, key):
 `key`: post parameter name
+
 **returns**: returns value of post parameter if any, otherwise None
 
 <br />
@@ -62,6 +63,7 @@ contains constans (`STATUS`)
 
 #####  JSONRequest.headers(self, key):
 `key`: header name
+
 **returns**: returns value of header if any, otherwise None
 
 ---
@@ -71,6 +73,7 @@ contains constans (`STATUS`)
 `body`: response body
 `dict: headers`: response headers
 `int: status`: response status code
+
 **returns**: a JSONResponse object
 
 <br />
@@ -88,6 +91,7 @@ Overwrites any headers mentioned `headers`
 
 #####  JSONResponse.render(self):
 Renders the request into a valid string that can be sent to client
+
 **returns**: rendered request
 
 ## logger .py
