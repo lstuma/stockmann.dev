@@ -73,17 +73,17 @@ func `JSONResponse.render(self)`:
  - used to print log messages to stdout
 
 func `logger.log(level, msg, pre='', end='\n')`:
-    `int: level`: verbosity level, needs to be in range of 0-6
-    `str: msg`: message to log
-    `str: pre`: prefix before verbosity indicator
-    `str: end`: suffix after log message
-    Prints a log message to *stoud* following the provided verbosity level.
-    Possible verbosity levels:
-        0. error
-        1. warning
-        2. success
-        3. info
-        4. verbose
-        5. very verbose
-        6. debug
-    *returns*: void
+ - `int: level`: verbosity level, needs to be in range of 0-6
+ - `str: msg`: message to log
+ - `str: pre`: prefix before verbosity indicator
+ - `str: end`: suffix after log message
+ - Prints a log message to *stoud* following the provided verbosity level.
+ - Possible verbosity levels:
+    0. error
+    1. warning
+    2. success
+    3. info
+    4. verbose
+    5. very verbose
+    6. debug
+ - *returns*: void
