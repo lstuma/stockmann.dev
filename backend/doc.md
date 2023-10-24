@@ -103,5 +103,5 @@ Possible verbosity levels:  <br/>
 - `3` :info
 - `4` :verbose
 - `5` :very verbose
-- `6` :debug
+- `6` :debug <br/>
 **returns**: void
