@@ -1,7 +1,7 @@
 from logger import log
 from http_utils import JSONRequest, JSONResponse
 import http_cors
-import http_settings
+import app.http_settings as http_settings
 import traceback
 
 

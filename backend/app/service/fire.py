@@ -1,6 +1,6 @@
 
 # get current firestats
-with open('./service/service_data/fire.fly', 'r') as f:
+with open('./app/service/service_data/fire.fly', 'r') as f:
     fires = [int(count) for count in f.readlines()[:-1]]
 
 
@@ -18,6 +18,6 @@ def votefire(id):
         
         
 def save():
-    with open('./service/service_data/fire.fly', 'w') as f:
+    with open('./app/service/service_data/fire.fly', 'w') as f:
         f.write('\n'.join([str(count) for count in fires]))
     return

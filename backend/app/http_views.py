@@ -1,5 +1,5 @@
 from http_utils import JSONRequest, JSONResponse
-import service.fire as fire
+import app.service.fire as fire
 
 def api(request: JSONRequest):
     # test api endpoint

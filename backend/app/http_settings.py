@@ -1,4 +1,4 @@
-import http_views as views
+import app.http_views as views
 
 # URLS
 urls = {
@@ -18,4 +18,4 @@ allowed_origins = ['*', 'http://api.stockmann.dev', 'http://stockmann.dev', 'htt
 allow_credentials = 'false'
 
 # ADRESS tuple of (<address>,<port>)
-address = ("", 80)
+address = ("", 443)

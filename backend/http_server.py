@@ -1,7 +1,7 @@
 import socket
 from logger import log
 import http_handler
-import http_settings
+import app.http_settings as http_settings
 import traceback
 
 #

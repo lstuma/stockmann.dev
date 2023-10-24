@@ -1,5 +1,5 @@
 from http_utils import JSONRequest, JSONResponse
-import http_settings
+import app.http_settings as http_settings
 
 def get_headers(request: JSONRequest):
     cors_headers = {

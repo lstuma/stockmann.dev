@@ -1,4 +1,4 @@
-import http_settings
+import app.http_settings as http_settings
 
 prefixes = [
     '\033[0;0m[\033[;31me\033[0;0m] ',
