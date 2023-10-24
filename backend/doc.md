@@ -32,7 +32,7 @@ contains constans (`STATUS`)
 `str: body`: body of request
 `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
 **returns**: a JSONRequest object
-<br>
+<hr style="border: 1px black dashed">
 
 #####  @classmethod JSONRequest.from_str(cls, str):
 `str: str`: the entire http request as a string
