@@ -29,45 +29,45 @@ Visit site at [stockmann.dev](https://stockmann.dev)
 **class `http_utils.JSONRequest`**
 
 func `JSONRequest.__init__(self, method, path, headers, body, get='')`:
-    `str: method`: request method (`GET`|`POST`)
-    `str path`: requested path (e.g. `/api/test1`)
-    `dict headers`: headers of request
-    `str: body`: body of request
-    `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
-    *returns*: a JSONRequest object
+ - `str: method`: request method (`GET`|`POST`)
+ - `str path`: requested path (e.g. `/api/test1`)
+ - `dict headers`: headers of request
+ - `str: body`: body of request
+ - `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
+ - *returns*: a JSONRequest object
 
 func `@classmethod` `JSONRequest.from_str(cls, str)`:
-    `str: str`: the entire http request as a string
-    *returns*: a JSONRequest object
+ - `str: str`: the entire http request as a string
+ - *returns*: a JSONRequest object
 
 func `JSONRequest.get(self, key)`:
-    `key`: get parameter name
-    *returns*: returns value of get parameter if any, otherwise None
+ - `key`: get parameter name
+ - *returns*: returns value of get parameter if any, otherwise None
 
 func `JSONRequest.post(self, key)`:
-    `key`: post parameter name
-    *returns*: returns value of post parameter if any, otherwise None
+ - `key`: post parameter name
+ - *returns*: returns value of post parameter if any, otherwise None
 
 func `JSONRequest.headers(self, key)`:
-    `key`: header name
-    *returns*: returns value of header if any, otherwise None
+ - `key`: header name
+ - *returns*: returns value of header if any, otherwise None
 
 **class `http_utils.JSONResponse`**
 
 func `JSONResponse.__init__(self, body, headers={}, status=200)`:
-    `body`: response body
-    `dict: headers`: response headers
-    `int: status`: response status code
-    *returns*: a JSONResponse object
+ - `body`: response body
+ - `dict: headers`: response headers
+ - `int: status`: response status code
+ - *returns*: a JSONResponse object
 
 func `JSONResponse.set_headers(self, headers)`:
-    `dict: headers`: headers to overwrite
-    Overwrites any headers mentioned `headers`
-    *returns*: void
+ - `dict: headers`: headers to overwrite
+ - Overwrites any headers mentioned `headers`
+ - *returns*: void
 
 func `JSONResponse.render(self)`:
-    Renders the request into a valid string that can be sent to client
-    *returns*: rendered request
+ - Renders the request into a valid string that can be sent to client
+ - *returns*: rendered request
 
 #### logger
  - used to print log messages to stdout
