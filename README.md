@@ -27,6 +27,7 @@ Visit site at [stockmann.dev](https://stockmann.dev)
  - contains constans (`STATUS`)
 
 **class `http_utils.JSONRequest`**
+
 func `JSONRequest.__init__(self, method, path, headers, body, get='')`:
     `str: method`: request method (`GET`|`POST`)
     `str path`: requested path (e.g. `/api/test1`)
@@ -35,7 +36,7 @@ func `JSONRequest.__init__(self, method, path, headers, body, get='')`:
     `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
     *returns*: a JSONRequest object
 
-func @classmethod `JSONRequest.from_str(cls, str)`:
+func `@classmethod` `JSONRequest.from_str(cls, str)`:
     `str: str`: the entire http request as a string
     *returns*: a JSONRequest object
 
@@ -52,6 +53,7 @@ func `JSONRequest.headers(self, key)`:
     *returns*: returns value of header if any, otherwise None
 
 **class `http_utils.JSONResponse`**
+
 func `JSONResponse.__init__(self, body, headers={}, status=200)`:
     `body`: response body
     `dict: headers`: response headers
