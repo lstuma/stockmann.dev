@@ -13,8 +13,8 @@ contains socket handling and forwards them to `http_handler.handle_request(...)`
 
 ## http_handler .py
 ##### Description:
-handles connections and forward requests to callbacks defined in `app.http_settings.urls`
-will compare Hosts header to `app.http_settings.allowed_hosts`
+handles connections and forward requests to callbacks defined in `app.http_settings.urls` <br/>
+will compare Hosts header to `app.http_settings.allowed_hosts` <br/>
 will compare possible Origin header to `app.http_settings.allowed_origins`
 
 ## http_utils .py
@@ -103,5 +103,6 @@ Possible verbosity levels:  <br/>
 - `3` :info
 - `4` :verbose
 - `5` :very verbose
-- `6` :debug <br/>
+- `6` :debug
+
 **returns**: void
