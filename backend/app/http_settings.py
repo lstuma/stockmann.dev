@@ -12,8 +12,8 @@ VERBOSITY = 4
 
 # PROTOCL HTTP / HTTPS
 USE_HTTPS = True
-CERT_PATH = ''
-PRIVKEY_PATH = ''
+CERT_PATH = '/etc/letsencrypt/live/api.stockmann.dev/fullchain.pem'
+PRIVKEY_PATH = '/etc/letsencrypt/live/api.stockmann.dev/privkey.pem'
 PRIVKEY_DECRYPT_PASSWD = ''
 HTTPS_HOSTNAME = 'api.stockmann.dev'
 
