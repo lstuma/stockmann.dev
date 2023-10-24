@@ -33,6 +33,7 @@ def run_server():
             log(0, 'securing sockets failed!')
             return
 
+        sock = secure_sock
         log(2, 'successfully secured sockets!')
 
     else:
