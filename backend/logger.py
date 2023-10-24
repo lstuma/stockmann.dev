@@ -33,7 +33,7 @@ verbosity = 6
 
 def log(level, msg, pre='', end='\n', named='', bypass=False):
     if level <= verbosity or bypass:
-        print(pre + prefixes[level] + ('['+named+'\033[0;0m]' if named else '') + msg, end=end)
+        print(pre + ('['+named+'\033[0;0m]' if named else '') + prefixes[level] + msg, end=end)
 
 def create_log(name, color):
     return lambda level, msg, pre='', end='\n', bypass=False: log(level=level, msg=msg, pre=pre, end=end, bypass=bypass, named=colors[color]+name)
