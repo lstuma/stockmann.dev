@@ -90,12 +90,15 @@ Renders the request into a valid string that can be sent to client  <br/>
 used to print log messages to stdout
 
 ---
-##### log(level, msg, pre='', end='\n'):
+##### log(level, msg, named='', namecolor=0, bypass=False, pre='', end='\n'):
 `int: level`: verbosity level, needs to be in range of 0-6  <br/>
 `str: msg`: message to log  <br/>
+`str: named`: extra prefix further describing the origin of the log message <br/>
+`int: ncolor`: color of name field <br/>
+`bool: bypass`: allow bypass of vervosity level <br/>
 `str: pre`: prefix before verbosity indicator  <br/>
 `str: end`: suffix after log message  <br/>
-Prints a log message to *stdoud* following the provided verbosity level.
+Prints a log message to *stdoud* following the provided verbosity level. <br/>
 Possible verbosity levels:  <br/>
 - `0` : error
 - `1` :warning
@@ -106,3 +109,12 @@ Possible verbosity levels:  <br/>
 - `6` :debug
 
 **returns**: void
+
+<br />
+<br />
+
+#### create_log(name, color):
+`str: name`: name to register the log under <br/>
+`str: color`: color of name <br/>
+Generates a log function that can be used to log under the provided name. <br/>
+**returns**: log function
