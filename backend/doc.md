@@ -32,24 +32,28 @@ contains constans (`STATUS`)
 `str: body`: body of request
 `str: get`: get parameters in request (e.g. `test1=1&test2=2`)
 **returns**: a JSONRequest object
+
 <br />
 <br />
 
 #####  @classmethod JSONRequest.from_str(cls, str):
 `str: str`: the entire http request as a string
 **returns**: a JSONRequest object
+
 <br />
 <br />
 
 #####  JSONRequest.get(self, key):
 `key`: get parameter name
 **returns**: returns value of get parameter if any, otherwise None
+
 <br />
 <br />
 
 #####  JSONRequest.post(self, key):
 `key`: post parameter name
 **returns**: returns value of post parameter if any, otherwise None
+
 <br />
 <br />
 
@@ -65,6 +69,7 @@ contains constans (`STATUS`)
 `dict: headers`: response headers
 `int: status`: response status code
 **returns**: a JSONResponse object
+
 <br />
 <br />
 
@@ -74,6 +79,7 @@ contains constans (`STATUS`)
 Overwrites any headers mentioned `headers`
 
 **returns**: void
+
 <br />
 <br />
 
