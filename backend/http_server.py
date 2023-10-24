@@ -26,10 +26,17 @@ def run_server():
     log(2, f'now listening on {address[0] if address[0] else "any"}:{address[1]}')
 
     if http_settings.USE_HTTPS:
-        log(3, 'TLS:')
-        sock = http_secure.make_secure(sock, cert_path, privkey_path, privkey_password)
+        log(3, 'securing sockets...')
+        secure_sock = http_secure.make_secure(sock, cert_path, privkey_path, privkey_password)
+        # check if securing socket was successfull
+        if not secure_sock:
+            log(0, 'securing sockets failed!')
+            return
+
+        log(2, 'successfully secured sockets!')
+
     else:
-        log(3, '')
+        log(3, 'using http (insecure sockets)')
 
     while True:
         connection, client_address = sock.accept()

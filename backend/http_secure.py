@@ -17,13 +17,13 @@ def make_secure(sock, cert_path, privatekey_path, password=None):
         log(3, f'loading tls private key from {privatekey_path}')
         ssl_context.load_cert_chain(certfile=cert_path, keyfile=privatekey_path, password=password)
     except FileNotFoundError:
-        log(0, 'failed to secure socket', bypass=True)
         log(0, 'cert_path or privatekey_path invalid!', bypass=True)
+        log(0, 'failed to secure socket', bypass=True)
         return None
     secure_sock = ssl_context.wrap_socket(sock, server_side=True)
     return secure_sock
     
 def ask_password():
-    log(0, 'failed to decrypt keyfile')
     log(1, 'password required to decrypt keyfile!', bypass=True)
+    log(0, 'failed to decrypt keyfile')
     input('\033[;31mPASSWORD FOR KEYFILE: \033[0;0m]')
