@@ -8,14 +8,22 @@ urls = {
 }
 
 # VERBOSITY (0-6)
-logging_level = 4
+VERBOSITY = 4
+
+# PROTOCL HTTP / HTTPS
+USE_HTTPS = True
+CERT_PATH = ''
+PRIVKEY_PATH = ''
+PRIVKEY_DECRYPT_PASSWD = ''
+HTTPS_HOSTNAME = 'api.stockmann.dev'
 
 # ALLOWED_HOSTS
-allowed_hosts = ['127.0.0.1', 'api.stockmann.dev']
+ALLOWED_HOSTS = ['127.0.0.1', 'api.stockmann.dev']
 
 # CORS
-allowed_origins = ['*', 'http://api.stockmann.dev', 'http://stockmann.dev', 'https://stockmann.dev', 'http://127.0.0.1:3000', 'http://localhost:3000']
-allow_credentials = 'false'
+ALLOWED_ORIGINS = ['*', 'http://api.stockmann.dev', 'http://stockmann.dev', 'https://stockmann.dev', 'http://127.0.0.1:3000', 'http://localhost:3000']
+ALLOW_CREDENTIALS = False
 
-# ADRESS tuple of (<address>,<port>)
-address = ("", 443)
+# ADDRESS and PORT (empty address opens on all interfaces)
+ADDRESS = ""
+PORT = 443
