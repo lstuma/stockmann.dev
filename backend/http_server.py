@@ -26,7 +26,7 @@ def run_server():
     log(2, f'now listening on {address[0] if address[0] else "any"}:{address[1]}')
 
     if http_settings.USE_HTTPS:
-        log(3, 'securing')
+        log(3, 'TLS:')
         sock = http_secure.make_secure(sock, cert_path, privkey_path, privkey_password)
     else:
         log(3, '')
@@ -71,7 +71,7 @@ if __name__ == '__main__':
         "\tCORS ALLOWED ORIGINS: \033[;32m" + str(http_settings.ALLOWED_ORIGINS) + "\033[0;0m\n" +\
         "\tCORS ALLOW CREDENTIALS: " + ('\033[;32mTRUE' if str(http_settings.ALLOW_CREDENTIALS) else '\033[;31mFALSE') + "\033[0;0m\n" +\
         "\tADDRESS: \033[;32m" + (address[0] if address[0] else 'ANY') + "\033[0;0m\n" +\
-        "\tPORT: \033[;32m" + str(address[1])
+        "\tPORT: \033[;32m" + str(address[1]) + "\033[0;0m\n"
     )
 
     
