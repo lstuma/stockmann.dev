@@ -79,11 +79,11 @@ func `logger.log(level, msg, pre='', end='\n')`:
  - `str: end`: suffix after log message
  - Prints a log message to *stoud* following the provided verbosity level.
  - Possible verbosity levels:
-    0. error
-    1. warning
-    2. success
-    3. info
-    4. verbose
-    5. very verbose
-    6. debug
+     - `0`: error
+     - `1`:warning
+     - `2`:success
+     - `3`:info
+     - `4`:verbose
+     - `5`:very verbose
+     - `6`:debug
  - *returns*: void
